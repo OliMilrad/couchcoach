@@ -2,15 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Circalight";
+$headers-font: "Circa";
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
+ @font-face {
+  font-family: "Circa";
 //   src: font-url('FontFile.eot');
 //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
+src: asset-url('CRC65.woff') format('woff')
 //        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+ }
+ @font-face {
+  font-family: "Circalight";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+src: asset-url('CRC35.woff') format('woff')
+//        font-url('FontFile.ttf') format('truetype')
+ }
+ $my-font: "Circa";

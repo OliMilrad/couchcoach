@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Coach.destroy_all
+
+coach1 = Coach.new(name: "Евгений Голуб", filter: "кардио, сила, растяжка, фитбокс, бокс, борьба")
+# photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
+# user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
+coach1.save!
+
+coach2 = Coach.new(name: "Юлия Гришанова", filter: "сила, функционалка, растяжка, мфр")
+# photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
+# user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
+coach2.save!
+
+
+coach3 = Coach.new(name: "Яна Калиничева", filter: "сила, функционалка, растяжка, после родов, мфр, лечебная")
+# photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
+# user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
+coach3.save!
