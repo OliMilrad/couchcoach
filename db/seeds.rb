@@ -8,18 +8,27 @@
 
 Coach.destroy_all
 
-coach1 = Coach.new(name: "Евгений Голуб", filter: "кардио, сила, растяжка, фитбокс, бокс, борьба")
+coach1 = Coach.new(name: "Евгений", filter: "кардио, сила, растяжка, фитбокс, бокс, борьба")
 # photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
 # user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
 coach1.save!
 
-coach2 = Coach.new(name: "Юлия Гришанова", filter: "сила, функционалка, растяжка, мфр")
+coach2 = Coach.new(name: "Юлия", filter: "сила, функционалка, растяжка, мфр")
 # photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
 # user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
 coach2.save!
 
-
-coach3 = Coach.new(name: "Яна Калиничева", filter: "сила, функционалка, растяжка, после родов, мфр, лечебная")
+coach3 = Coach.new(name: "Яна", filter: "сила, функционалка, растяжка, после родов, мфр, лечебная")
 # photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
 # user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
 coach3.save!
+
+coach4 = Coach.new(name: "Амира", filter: "мфр, лечебная")
+# photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
+# user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
+coach4.save!
+
+coach5 = Coach.new(name: "Темирлан", filter: "сила, функционалка")
+# photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
+# user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
+coach5.save!

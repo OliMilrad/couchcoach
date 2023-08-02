@@ -1,108 +1,89 @@
-<div id="header" style="position:sticky; top: 0; background-color: white; padding-top:10px; padding-right:140px; padding-left:140px;">
+<div id="header" class="header">
   <div class="text-center">
     <%= image_tag "logo_main.png" %>
   </div>
   <br>
   <div class="text-center">
-
-    <div style="display: flex; justify-content:space-between; border-bottom: 1px solid; line-height: 5%">
-
-            <ul id="item-1page">
-              <p>как это работает?</p>
-            </ul>
-            <ul id="item-2page">
-              <p>наши коучи</p>
-            </ul>
-            <ul id="item-3page">
-              <p>цены</p>
-            </ul>
-            <ul id="item-4page">
-              <p>зачем мне это?</p>
-            </ul>
-            <ul id="item-5page">
-              <p>я - тренер</p>
-            </ul>
-            <%# <li class="nav-item">
+    <div class="header-items">
+      <ul id="item-1page">
+        <p>как это работает?</p>
+      </ul>
+      <ul id="item-2page">
+        <p>наши коучи</p>
+      </ul>
+      <ul id="item-3page">
+        <p>цены</p>
+      </ul>
+      <ul id="item-4page">
+        <p>зачем мне это?</p>
+      </ul>
+      <ul id="item-5page">
+        <p>я - тренер</p>
+      </ul>
+      <%# <li class="nav-item">
               <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            <%# </li> %>
-
+      <%# </li> %>
     </div>
   </div>
 </div>
 <br>
-
 <div  style="padding-right:140px; padding-left:140px;">
-
   <div id="1_page" class="container" style="display:flex; justify-content:space-around; height:70vh; align-items:center;">
-
     <div class="1_page_text">
-
       <h1 style="font-weight: 900; font-size: 65px; line-height: 85%;">Персональный фитнес коуч онлайн</h1>
-        <p><i class="fa-solid fa-arrow-right"></i> в удобное для тебя время</p>
-        <p><i class="fa-solid fa-arrow-right"></i> не за бешеные бабки</p>
-        <p><i class="fa-solid fa-arrow-right"></i> не надо ехать на треню в метро
+      <p><i class="fa-solid fa-arrow-right"></i> в удобное для тебя время</p>
+      <p><i class="fa-solid fa-arrow-right"></i> не за бешеные бабки</p>
+      <p><i class="fa-solid fa-arrow-right"></i> не надо ехать на треню в метро
         (и даже трамвае)</p>
-        <p><i class="fa-solid fa-arrow-right"></i> напрягаться надо
+      <p><i class="fa-solid fa-arrow-right"></i> напрягаться надо
         (но немного и в удовольствие)</p>
-        <p style="font-weight: 900"><i class="fa-solid fa-arrow-right"></i> первое занятие – бесплатно </p>
-        <button type="button" class="btn btn-green">Го на спорт</button>
+      <p style="font-weight: 900"><i class="fa-solid fa-arrow-right"></i> первое занятие – бесплатно </p>
+      <button type="button" class="btn btn-green">Го на спорт</button>
     </div>
     <div class="1_page_video">
-     <%= image_tag "video_place.png", width: 650 %>
+      <%= image_tag "video_place.png", width: 650 %>
     </div>
-
   </div>
-
   <br>
-
-  <div id="2_page" class="container" style="display:flex; flex-direction: column; height:70vh; align-items:center;">
-
+  <div id="2_page" class="container" style="display:flex; flex-direction: column; height:40vh; align-items: center;">
     <div class="2_page_text text-center">
-
       <h1><strong>Как это работает?</strong></h1>
       <p>55 минут драйва с настоящим профи тренером, который проведёт с тобой комплексную тренировку.</p>
       <p>Пс-с. Да, если не зайдет – можно просто отключить интернет.  </p>
     </div>
-
-    <div class="2_page_graph" style="display:flex; justify-content:center; flex-direction: row">
-
-      <div class="graph 1_el" style="display:flex; flex-direction:column">
-      <%= image_tag "icon_1.png"%>
-      <p> Подбираем тренера</p>
+    <div class="page_2_graph">
+      <div class="graph 1_el">
+        <div class="circle-green">
+          <h2>01</h2>
+        </div>
+        <p> Подбираем тренера</p>
       </div>
-
-      <div>
-      <%= image_tag "arrow.png", width: 350%>
+      <div class="arrow">
+        <%= image_tag "arrow.png", width: 350%>
       </div>
-
-      <div class="graph 2_el" style="display:flex; flex-direction:column">
-      <%= image_tag "icon_2.png" %>
-      <p> Назначаем удобное время</p>
+      <div class="graph 2_el">
+        <div class="circle-green">
+          <h2>02</h2>
+        </div>
+        <p> Назначаем удобное время</p>
       </div>
-
-       <div>
-      <%= image_tag "arrow.png", width: 350%>
+      <div class="arrow">
+        <%= image_tag "arrow.png", width: 350%>
       </div>
-
-      <div class="graph 3_el" style="display:flex; flex-direction:column">
-      <%= image_tag "icon_3.png" %>
-      <p> Перед занятием высылаем ссылку на видео-треню</p>
+      <div class="graph 3_el">
+        <div class="circle-green">
+          <h2>03</h2>
+        </div>
+        <p> Перед занятием высылаем ссылку на видео-треню</p>
       </div>
-
     </div>
-
   </div>
-
   <br>
-
-  <div id="3_page" class="container" style="height:70vh">
+  <div id="3_page" class="container" style="height:80vh">
     <h1 style="font-weight: 900; text-align:center;">Наши коучи</h1>
-
     <br>
-
     <div>
-        <ul class="nav">
-
+      <ul class="nav">
         <li class="nav-item">
           <a class="btn btn-green" href="#">кардио</a>
         </li>
@@ -133,210 +114,131 @@
         <li class="nav-item">
           <a class="btn btn-outline-dark" href="#">лечебная</a>
         </li>
-
-        </ul>
+      </ul>
     </div>
-
-      <br>
-
-    <div class="3_page_cards" style="display:flex">
-
+    <br>
+    <div class="page_3_cards">
       <% @coaches.each do |coach| %>
+        <div class="card-coach">
+          <%= image_tag "golub_photo.png", height: 270%>
+          <div class="card-body">
+            <h5 class="card-title"> <%= coach.name%> </h5>
 
-      <div class="card-coach" style="width: 18rem;">
-         <%= image_tag "coach_icon.png", height: 270%>
-            <div class="card-body">
-              <h5 class="card-title"> <%= coach.name%> </h5>
-              <p class="card-text"> Невероятная баба огонь</p>
-              <button type="button" class="btn btn-green">Записаться</button>
-            </div>
-      </div>
-
-    <% end %>
-
-
-
+            <button type="button" class="btn btn-green">Записаться</button>
+          </div>
+        </div>
+      <% end %>
     </div>
-
   </div>
-
   <br>
-
   <div id="4_page" class="container" style="height:70vh">
-
-      <div class="4_page_text text-center">
-
-        <h1>Пробное занятие – бесплатно</h1>
-        <p>Без предоплаты. Полноценная тренировка длительностью 55 минут с индивидуально подобранным тренером</p>
-
-      </div>
-
-      <div class="4_page_cards" style="display:flex; justify-content:space-around;">
-
-          <div class="card-price">
-                  <div class="card-body">
-                    <p class="card-text">8 тренировок</p>
-                    <h5 class="card-title">89.60 €</h5>
-                    <p class="card-text"> 11.20 € за тренировку</p>
-                    <p class="card-text"> Ленивая опция для начинающей спортсменки</p>
-                    <p class="card-text"> ______________________</p>
-
-                    <p class="card-text">Тренировка (мин)</p>
-
-                        <ul class="nav nav-tabs card-header-tabs">
-                          <li class="nav-item">
-                            <a class="nav-link active" href="#">30</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">55</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">85</a>
-                          </li>
-                        </ul>
-
-
-                    <a href="#" class="btn btn-primary">Купить</a>
-                  </div>
-            </div>
-
-
-
-
-          <div class="card-price">
-                  <div class="card-body">
-                    <p class="card-text">24 тренировки</p>
-                    <h5 class="card-title">223.20 €</h5>
-                    <p class="card-text"> 9.30 € за тренировку</p>
-                    <p class="card-text"> Выгодная опция для начинающей спортсменки</p>
-                    <p class="card-text"> ______________________</p>
-
-                    <p class="card-text">Тренировка (мин)</p>
-
-                        <ul class="nav nav-tabs card-header-tabs">
-                          <li class="nav-item">
-                            <a class="nav-link active" href="#">30</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">55</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">85</a>
-                          </li>
-                        </ul>
-
-
-                    <a href="#" class="btn btn-primary">Купить</a>
-                  </div>
-            </div>
-
-
-
-
-          <div class="card-price">
-
-                  <div class="card-body">
-                    <p class="card-text">36 тренировок</p>
-                    <h5 class="card-title">306 €</h5>
-                    <p class="card-text"> 8.50 € за тренировку</p>
-                    <p class="card-text"> Крутая опция для начинающей спортсменки</p>
-                    <p class="card-text"> ______________________</p>
-
-                    <p class="card-text">Тренировка (мин)</p>
-
-                        <ul class="nav nav-tabs card-header-tabs">
-                          <li class="nav-item">
-                            <a class="nav-link active" href="#">30</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">55</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">85</a>
-                          </li>
-                        </ul>
-
-
-                    <a href="#" class="btn btn-primary">Купить</a>
-                  </div>
-            </div>
-
-
-
-
-          <div class="card-price">
-                  <div class="card-body">
-                    <p class="card-text">72 тренировки</p>
-                    <h5 class="card-title">568 €</h5>
-                    <p class="card-text"> 7.90 € за тренировку</p>
-                    <p class="card-text"> Экономная опция для начинающей спортсменки</p>
-                    <p class="card-text"> ______________________</p>
-
-                    <p class="card-text">Тренировка (мин)</p>
-
-                        <ul class="nav nav-tabs card-header-tabs">
-                          <li class="nav-item">
-                            <a class="nav-link active" href="#">30</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">55</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">85</a>
-                          </li>
-                        </ul>
-
-
-                    <a href="#" class="btn btn-primary">Купить</a>
-                  </div>
-            </div>
-
-
-
-
-      </div>
-  </div>
-
-  <br>
-
-  <div id="5_page" class="container" style="height:100vh">
-    <h1>Зачем это мне?</h1>
-
-    <div class="5_page_cards" style="display:flex">
-
-      <div class="card" style="width: 18rem;">
-         <%= image_tag "coach_icon.png"%>
-            <div class="card-body">
-              <h5 class="card-title">Давай честно</h5>
-              <p class="card-text">Заниматься самостоятельно – сложно. Наш мозг способен придумать тысячу отговорок, почему сегодня – можно пробить треню.</p>
-            </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-         <%= image_tag "coach_icon.png"%>
-            <div class="card-body">
-              <h5 class="card-title">Давай честно</h5>
-              <p class="card-text">Заниматься самостоятельно – сложно. Наш мозг способен придумать тысячу отговорок, почему сегодня – можно пробить треню.</p>
-            </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-         <%= image_tag "coach_icon.png"%>
-            <div class="card-body">
-              <h5 class="card-title">Давай честно</h5>
-              <p class="card-text">Заниматься самостоятельно – сложно. Наш мозг способен придумать тысячу отговорок, почему сегодня – можно пробить треню.</p>
-            </div>
-      </div>
-
-
-
+    <div class="page_4_text text-center">
+      <h1>Пробное занятие – бесплатно</h1>
+      <p>Без предоплаты. Полноценная тренировка длительностью 30 минут с индивидуально подобранным тренером</p>
     </div>
-
-
+    <div class="page_4_cards">
+      <div class="card-price">
+        <div class="card-body">
+          <p class="card-text">8 тренировок</p>
+          <h5 class="card-title">89.60 €</h5>
+          <p class="card-text"> 11.20 € за тренировку</p>
+          <p class="card-text"> Ленивая опция для начинающей спортсменки</p>
+          <hr class="solid">
+          <p class="card-text">Тренировка (мин)</p>
+          <div class="train-length-wrapper">
+            <div class="train-length-item-active">
+              <h5>30</h5>
+            </div>
+            <div class="train-length-item">
+              <h5>
+                60
+              </h5>
+            </div>
+          </div>
+          <a href="#" class="btn btn-light w-100">Купить</a>
+        </div>
+      </div>
+      <div class="card-price">
+        <div class="card-body">
+          <p class="card-text">24 тренировки</p>
+          <h5 class="card-title">223.20 €</h5>
+          <p class="card-text"> 9.30 € за тренировку</p>
+          <p class="card-text"> Выгодная опция для начинающей спортсменки</p>
+          <hr class="solid">
+          <p class="card-text">Тренировка (мин)</p>
+          <div class="train-length-wrapper">
+            <div class="train-length-item-active">
+              <h5>30</h5>
+            </div>
+            <div class="train-length-item">
+              <h5>
+                60
+              </h5>
+            </div>
+          </div>
+          <a href="#" class="btn btn-light w-100">Купить</a>
+        </div>
+      </div>
+      <div class="card-price-active">
+        <div class="card-body">
+          <p class="card-text">36 тренировок</p>
+          <h5 class="card-title">306 €</h5>
+          <p class="card-text"> 8.50 € за тренировку</p>
+          <p class="card-text"> Крутая опция для начинающей спортсменки</p>
+          <hr class="solid">
+          <p class="card-text">Тренировка (мин)</p>
+          <div class="train-length-wrapper">
+            <div class="train-length-item-reverse-active">
+              <h5>30</h5>
+            </div>
+            <div class="train-length-item">
+              <h5>
+                60
+              </h5>
+            </div>
+          </div>
+          <a href="#" class="btn btn-light w-100">Купить</a>
+        </div>
+      </div>
+      <div class="card-price">
+        <div class="card-body">
+          <p class="card-text">72 трeнировки</p>
+          <h5 class="card-title">568 €</h5>
+          <p class="card-text"> 7.90 € за тренировку</p>
+          <p class="card-text">Экономная опция для начинающей спортсменки</p>
+          <hr class="solid">
+          <p class="card-text">Тренировка (мин)</p>
+          <div class="train-length-wrapper">
+            <div class="train-length-item-active">
+              <h5>30</h5>
+            </div>
+            <div class="train-length-item">
+              <h5>
+                60
+              </h5>
+            </div>
+          </div>
+          <a href="#" class="btn btn-light w-100">Купить</a>
+        </div>
+      </div>
+    </div>
   </div>
-
   <br>
-
+  <div id="5_page" class="container" style="height:80vh">
+    <h1 class="text-center pb-4">Зачем это мне?</h1>
+    <div class="page_5_cards">
+      <% for i in 0..3 do %>
+        <div class="card" style="width: 18rem;">
+          <%= image_tag "reason_icon.png"%>
+          <div class="card-body">
+            <h5 class="card-title">Давай честно</h5>
+            <p class="card-text">Заниматься самостоятельно – сложно. Наш мозг способен придумать тысячу отговорок, почему сегодня – можно пробить треню.</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <br>
   <%# <div id="6_page" class="container">
     <h1>Наши спортсменки</h1>
     <p>Подключились к фито-крыто и стали такими крутыми. </p>
@@ -345,15 +247,14 @@
 
       <div class="card" style="width: 18rem;">
          <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
+  <%# <div class="card-body">
               <h5 class="card-title">Ася</h5>
               <p class="card-text">не занималась уже год</p>
             </div>
       </div> %>
-
-      <%# <div class="card" style="width: 18rem;">
+  <%# <div class="card" style="width: 18rem;">
          <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
+  <%# <div class="card-body">
               <h5 class="card-title">Маша</h5>
               <p class="card-text">занимается каждый день</p>
             </div>
@@ -361,7 +262,7 @@
 
        <div class="card" style="width: 18rem;">
          <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
+  <%# <div class="card-body">
               <h5 class="card-title">Ася</h5>
               <p class="card-text">не занималась уже год</p>
             </div>
@@ -369,7 +270,7 @@
 
        <div class="card" style="width: 18rem;">
          <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
+  <%# <div class="card-body">
               <h5 class="card-title">Маша</h5>
               <p class="card-text">занимается каждый день</p>
             </div>
@@ -377,128 +278,110 @@
 
        <div class="card" style="width: 18rem;">
          <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
+  <%# <div class="card-body">
               <h5 class="card-title">Ася</h5>
               <p class="card-text">не занималась уже год</p>
             </div>
       </div> %>
-
-
-    <%# </div> %>
-
-
   <%# </div> %>
-
+  <%# </div> %>
   <br>
-
-  <div id="7_page" class="container" style="height:100vh">
-
-      <div class="text-center">
-
-          <h1><strong>Для тренеров и коучей</strong></h1>
-          <p>Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
-          <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
-          <a href="#" class="btn btn-green">Хочу к вам</a>
+  <div id="7_page" class="container" style="height:60vh">
+    <div class="text-center page-content">
+      <div class="page-text">
+        <h1 style="font-weight:800"><strong>Для тренеров и коучей</strong></h1>
+        <p>Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
+        <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
+        <a href="#" class="btn btn-green">
+          <h6>Хочу к вам</h6>
+        </a>
       </div>
+    </div>
   </div>
-
   <div id="8_page" class="container" style="height:100vh">
-
-        <div class="row">
-
-            <div class="col-3">
-              <%= image_tag "map.png" %>
-            </div>
-
-            <div class="col-9 contact_form">
-              <h1><strong> С дивана на треню</strong></h1>
-              <h1><strong> С трени на диван</strong></h1>
-
-               <div style="display:flex">
-                  <i class="fa-brands fa-instagram"></i>
-                  <i class="fa-brands fa-facebook-f"></i>
-                </div>
-
-
-            </div>
-
-            </div>
+    <div class="row">
+      <div class="col-3">
+        <%= image_tag "map.png" %>
+      </div>
+      <div class="col-9 contact_form">
+        <h1><strong> С дивана на треню</strong></h1>
+        <h1><strong> С трени на диван</strong></h1>
+        <div style="display:flex">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook-f"></i>
         </div>
+      </div>
+    </div>
   </div>
-
-
-  </div>
-
+</div>
+</div>
 <script>
+  const header1 = document.getElementById('item-1page');
 
-    const header1 = document.getElementById('item-1page');
+  header1.addEventListener('click', function() {
+      const element = document.getElementById("2_page");
+        const y =
+          element.getBoundingClientRect().top +
+          window.pageYOffset -
+          header.offsetHeight -
+          30;
+        if (element) {
+          window.scrollTo({ top: +y, behavior: 'smooth' });
+        }
+      })
 
-    header1.addEventListener('click', function() {
-        const element = document.getElementById("2_page");
-          const y =
-            element.getBoundingClientRect().top +
-            window.pageYOffset -
-            header.offsetHeight -
-            30;
-          if (element) {
-            window.scrollTo({ top: +y, behavior: 'smooth' });
-          }
-        })
+  const header2 = document.getElementById('item-2page');
 
-    const header2 = document.getElementById('item-2page');
+  header2.addEventListener('click', function() {
+      const element = document.getElementById("3_page");
+        const y =
+          element.getBoundingClientRect().top +
+          window.pageYOffset -
+          header.offsetHeight -
+          30;
+        if (element) {
+          window.scrollTo({ top: +y, behavior: 'smooth' });
+        }
+      })
+  const header3 = document.getElementById('item-3page');
 
-    header2.addEventListener('click', function() {
-        const element = document.getElementById("3_page");
-          const y =
-            element.getBoundingClientRect().top +
-            window.pageYOffset -
-            header.offsetHeight -
-            30;
-          if (element) {
-            window.scrollTo({ top: +y, behavior: 'smooth' });
-          }
-        })
-    const header3 = document.getElementById('item-3page');
+  header3.addEventListener('click', function() {
+      const element = document.getElementById("4_page");
+        const y =
+          element.getBoundingClientRect().top +
+          window.pageYOffset -
+          header.offsetHeight -
+          30;
+        if (element) {
+          window.scrollTo({ top: +y, behavior: 'smooth' });
+        }
+      })
 
-    header3.addEventListener('click', function() {
-        const element = document.getElementById("4_page");
-          const y =
-            element.getBoundingClientRect().top +
-            window.pageYOffset -
-            header.offsetHeight -
-            30;
-          if (element) {
-            window.scrollTo({ top: +y, behavior: 'smooth' });
-          }
-        })
+  const header4 = document.getElementById('item-4page');
 
-    const header4 = document.getElementById('item-4page');
+  header4.addEventListener('click', function() {
+      const element = document.getElementById("5_page");
+        const y =
+          element.getBoundingClientRect().top +
+          window.pageYOffset -
+          header.offsetHeight -
+          30;
+        if (element) {
+          window.scrollTo({ top: +y, behavior: 'smooth' });
+        }
+      })
 
-    header4.addEventListener('click', function() {
-        const element = document.getElementById("5_page");
-          const y =
-            element.getBoundingClientRect().top +
-            window.pageYOffset -
-            header.offsetHeight -
-            30;
-          if (element) {
-            window.scrollTo({ top: +y, behavior: 'smooth' });
-          }
-        })
+  const header5 = document.getElementById('item-5page');
 
-    const header5 = document.getElementById('item-5page');
-
-    header5.addEventListener('click', function() {
-        const element = document.getElementById("7_page");
-          const y =
-            element.getBoundingClientRect().top +
-            window.pageYOffset -
-            header.offsetHeight -
-            30;
-          if (element) {
-            window.scrollTo({ top: +y, behavior: 'smooth' });
-          }
-        })
-
-
+  header5.addEventListener('click', function() {
+      const element = document.getElementById("7_page");
+        const y =
+          element.getBoundingClientRect().top +
+          window.pageYOffset -
+          header.offsetHeight -
+          30;
+        if (element) {
+          window.scrollTo({ top: +y, behavior: 'smooth' });
+        }
+      })
 </script>
