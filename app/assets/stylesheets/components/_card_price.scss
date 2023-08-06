@@ -43,32 +43,18 @@
     }
     .train-length-item-active {
       @extend .train-length-item;
-      background-color: #00ff19;
-      border-color: transparent;
     }
   }
 }
-.card-price-active {
+.card-price:hover {
+  transition: 1s;
   @extend .card-price;
   background-color: #00ff19;
 
-  .train-length-item-reverse-active {
-    border: 1px solid #000;
-    border-radius: 7px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: bolder;
-    background-color: #fff;
-    border-color: transparent;
-
-    h5 {
-      font-size: 20px;
-      padding: 0;
-      margin: 0;
+  .train-length-wrapper {
+    .train-length-item-active {
+      transition: 1s;
+      background-color: #fff;
     }
   }
 }

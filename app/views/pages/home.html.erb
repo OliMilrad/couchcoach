@@ -85,34 +85,25 @@
     <div>
       <ul class="nav">
         <li class="nav-item">
-          <a class="btn btn-green" href="#">кардио</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">сила</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">растяжка</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">фитбокс</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">бокс</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">борьба</a>
+          <a class="btn btn-green" href="#">сила</a>
         </li>
         <li class="nav-item">
           <a class="btn btn-outline-dark" href="#">функционалка</a>
         </li>
         <li class="nav-item">
+          <a class="btn btn-outline-dark" href="#">растяжка</a>
+        </li>
+        <li class="nav-item">
           <a class="btn btn-outline-dark" href="#">мфр</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-dark" href="#">фитбокс</a>
         </li>
         <li class="nav-item">
           <a class="btn btn-outline-dark" href="#">после родов</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">лечебная</a>
+          <a class="btn btn-outline-dark" href="#">реабилитация</a>
         </li>
       </ul>
     </div>
@@ -120,10 +111,9 @@
     <div class="page_3_cards">
       <% @coaches.each do |coach| %>
         <div class="card-coach">
-          <%= image_tag "golub_photo.png", height: 270%>
+          <%= image_tag coach.photo, height: 270%>
           <div class="card-body">
             <h5 class="card-title"> <%= coach.name%> </h5>
-
             <button type="button" class="btn btn-green">Записаться</button>
           </div>
         </div>
@@ -146,10 +136,10 @@
           <hr class="solid">
           <p class="card-text">Тренировка (мин)</p>
           <div class="train-length-wrapper">
-            <div class="train-length-item-active">
+            <div class="train-length-item">
               <h5>30</h5>
             </div>
-            <div class="train-length-item">
+            <div class="train-length-item-active">
               <h5>
                 60
               </h5>
@@ -167,10 +157,10 @@
           <hr class="solid">
           <p class="card-text">Тренировка (мин)</p>
           <div class="train-length-wrapper">
-            <div class="train-length-item-active">
+            <div class="train-length-item">
               <h5>30</h5>
             </div>
-            <div class="train-length-item">
+            <div class="train-length-item-active">
               <h5>
                 60
               </h5>
@@ -179,7 +169,7 @@
           <a href="#" class="btn btn-light w-100">Купить</a>
         </div>
       </div>
-      <div class="card-price-active">
+      <div class="card-price">
         <div class="card-body">
           <p class="card-text">36 тренировок</p>
           <h5 class="card-title">306 €</h5>
@@ -188,10 +178,10 @@
           <hr class="solid">
           <p class="card-text">Тренировка (мин)</p>
           <div class="train-length-wrapper">
-            <div class="train-length-item-reverse-active">
+            <div class="train-length-item">
               <h5>30</h5>
             </div>
-            <div class="train-length-item">
+            <div class="train-length-item-active">
               <h5>
                 60
               </h5>
@@ -209,10 +199,10 @@
           <hr class="solid">
           <p class="card-text">Тренировка (мин)</p>
           <div class="train-length-wrapper">
-            <div class="train-length-item-active">
+            <div class="train-length-item">
               <h5>30</h5>
             </div>
-            <div class="train-length-item">
+            <div class="train-length-item-active">
               <h5>
                 60
               </h5>
@@ -224,85 +214,105 @@
     </div>
   </div>
   <br>
+
   <div id="5_page" class="container" style="height:80vh">
     <h1 class="text-center pb-4">Зачем это мне?</h1>
     <div class="page_5_cards">
-      <% for i in 0..3 do %>
-        <div class="card" style="width: 18rem;">
-          <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
-          <div class="card-body">
-            <h5 class="card-title">Давай честно</h5>
-            <p class="card-text">Заниматься самостоятельно – сложно. Наш мозг способен придумать тысячу отговорок, почему сегодня – можно пробить треню.</p>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  <br>
-  <%# <div id="6_page" class="container">
-    <h1>Наши спортсменки</h1>
-    <p>Подключились к фито-крыто и стали такими крутыми. </p>
-
-    <div class="6_page_cards" style="display:flex">
-
       <div class="card" style="width: 18rem;">
-         <%= image_tag "coach_icon.png"%>
-  <%# <div class="card-body">
-              <h5 class="card-title">Ася</h5>
-              <p class="card-text">не занималась уже год</p>
-            </div>
-      </div> %>
-  <%# <div class="card" style="width: 18rem;">
-         <%= image_tag "coach_icon.png"%>
-  <%# <div class="card-body">
-              <h5 class="card-title">Маша</h5>
-              <p class="card-text">занимается каждый день</p>
-            </div>
+        <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
+        <div class="card-body">
+          <h5 class="card-title">Давай честно</h5>
+          <p class="card-text">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг будет придумывать тысячи причин, почему позаниматься можно и завтра/в понедельник/после отпуска. Личный тренер будет помогать тебе «не сбиваться» с пути. </div>
       </div>
-
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
+        <div class="card-body">
+          <h5 class="card-title">Безопасность и польза</h5>
+          <p class="card-text">Все наши коучи – крутые профессионалы. Мастера спорта с огромным опытом. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую. </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "reason_icon.png"%>
+        <div class="card-body">
+          <h5 class="card-title">Всегда под рукой</h5>
+          <p class="card-text">Бывает, что нет настроение на спорт. А бывает, что рррраааз – и появилось. С нами работают более 20 заряженных профессионалов, так что даже, если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.</div>
+      </div>
        <div class="card" style="width: 18rem;">
-         <%= image_tag "coach_icon.png"%>
-  <%# <div class="card-body">
-              <h5 class="card-title">Ася</h5>
-              <p class="card-text">не занималась уже год</p>
-            </div>
-      </div>
+        <%= image_tag "reason_icon.png"%>
+        <div class="card-body">
+          <h5 class="card-title">Нужен только он</h5>
+          <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
 
-       <div class="card" style="width: 18rem;">
-         <%= image_tag "coach_icon.png"%>
-  <%# <div class="card-body">
-              <h5 class="card-title">Маша</h5>
-              <p class="card-text">занимается каждый день</p>
-            </div>
       </div>
+      
 
-       <div class="card" style="width: 18rem;">
-         <%= image_tag "coach_icon.png"%>
-  <%# <div class="card-body">
-              <h5 class="card-title">Ася</h5>
-              <p class="card-text">не занималась уже год</p>
-            </div>
-      </div> %>
-  <%# </div> %>
-  <%# </div> %>
-  <br>
-  <div id="7_page" class="container" style="height:60vh">
-    <div class="text-center page-content">
-      <div class="page-text">
-        <h1 style="font-weight:800"><strong>Для тренеров и коучей</strong></h1>
-        <p>Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
-        <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
-        <a href="#" class="btn btn-green">
-          <h6>Хочу к вам</h6>
-        </a>
-      </div>
     </div>
   </div>
-  <div id="8_page" class="container" style="height:100vh">
+
+    <%# <div id="6_page" class="container">
+            <h1>Наши спортсменки</h1>
+            <p>Подключились к фито-крыто и стали такими крутыми. </p>
+
+            <div class="6_page_cards" style="display:flex">
+
+              <div class="card" style="width: 18rem;">
+                <%= image_tag "coach_icon.png"%>
+    <%# <div class="card-body">
+                      <h5 class="card-title">Ася</h5>
+                      <p class="card-text">не занималась уже год</p>
+                    </div>
+              </div> %>
+    <%# <div class="card" style="width: 18rem;">
+                <%= image_tag "coach_icon.png"%>
+    <%# <div class="card-body">
+                      <h5 class="card-title">Маша</h5>
+                      <p class="card-text">занимается каждый день</p>
+                    </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <%= image_tag "coach_icon.png"%>
+    <%# <div class="card-body">
+                      <h5 class="card-title">Ася</h5>
+                      <p class="card-text">не занималась уже год</p>
+                    </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <%= image_tag "coach_icon.png"%>
+    <%# <div class="card-body">
+                      <h5 class="card-title">Маша</h5>
+                      <p class="card-text">занимается каждый день</p>
+                    </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <%= image_tag "coach_icon.png"%>
+    <%# <div class="card-body">
+                      <h5 class="card-title">Ася</h5>
+                      <p class="card-text">не занималась уже год</p>
+                    </div>
+              </div> %>
+    <%# </div> %>
+    <%# </div> %>
+    <br>
+
+    <div id="7_page" class="container" style="height:60vh">
+      <div class="text-center page-content">
+        <div class="page-text">
+          <h1 style="font-weight:800"><strong>Для тренеров и коучей</strong></h1>
+          <p>Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
+          <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
+          <a href="#" class="btn btn-green">
+            <h6>Хочу к вам</h6>
+          </a>
+        </div>
+      </div>
+    </div>
+    <%# <div id="8_page" class="container" style="height:100vh">
     <div class="row">
       <div class="col-3">
         <%= image_tag "map.png" %>
-      </div>
+    <%# </div>
       <div class="col-9 contact_form">
         <h1><strong> С дивана на треню</strong></h1>
         <h1><strong> С трени на диван</strong></h1>
@@ -311,9 +321,9 @@
           <i class="fa-brands fa-facebook-f"></i>
         </div>
       </div>
-    </div>
+    </div> %>
+    <%# </div> %>
   </div>
-</div>
 </div>
 <script>
   const header1 = document.getElementById('item-1page');
