@@ -10,7 +10,7 @@ Coach.destroy_all
 
 coach1 = Coach.new(name: "Евгений", filter: "сила, растяжка, фитбокс")
 photo = File.open('app/assets/images/golub_photo.png')
-coach1.photo.attach(io: photo, filename: "golub_photo.png", content_type: "image/png")
+coach1.photo.attach(io: photo, filename: "golub_photo")
 coach1.save!
 
 coach2 = Coach.new(name: "Юлия", filter: "сила, растяжка, фитбокс, функционалка, мфр")
