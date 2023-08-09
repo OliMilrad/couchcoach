@@ -9,25 +9,30 @@ require "open-uri"
 
 Coach.destroy_all
 
-coach1 = Coach.new(name: "Евгений", filter: "сила, растяжка, фитбокс")
+coach1 = Coach.new(name: "Евгений", filter: "функционалка, сила, растяжка, фитбокс")
 photo = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691581163/golub_photo_a6hbfe.png")
 coach1.photo.attach(io: photo, filename: "golub_photo", content_type: "image/png")
 coach1.save!
 
-# coach2 = Coach.new(name: "Юлия", filter: "сила, растяжка, фитбокс, функционалка, мфр")
-# photo = File.open('app/assets/images/yulia_photo.png')
-# coach2.photo.attach(io: photo, filename: "golub_photo.png", content_type: "image/png")
-# coach2.save!
+coach2 = Coach.new(name: "Юлия", filter: "сила, растяжка, функционалка, мфр")
+photo = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691581163/yulia_photo_jbjifk.png")
+coach2.photo.attach(io: photo, filename: "ulia_photo", content_type: "image/png")
+coach2.save!
 
-# coach3 = Coach.new(name: "Яна", filter: "сила, функционалка, растяжка, после родов, мфр, лечебная")
-# photo = File.open('app/assets/images/yana_photo.png')
-# coach3.photo.attach(io: photo, filename: "golub_photo.png", content_type: "image/png")
-# coach3.save!
+coach3 = Coach.new(name: "Яна", filter: "сила, функционалка, растяжка, после родов, мфр, реабилитация")
+photo = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691581163/yana_photo_lxzrwa.png")
+coach3.photo.attach(io: photo, filename: "yana_photo", content_type: "image/png")
+coach3.save!
 
-# coach4 = Coach.new(name: "Амира", filter: "мфр, лечебная")
-# photo = File.open('app/assets/images/amira_photo.png')
-# coach4.photo.attach(io: photo, filename: "golub_photo.png", content_type: "image/png")
-# coach4.save!
+coach4 = Coach.new(name: "Амира", filter: "функционалка, сила")
+photo = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691581163/amira_photo_retuuf.png")
+coach4.photo.attach(io: photo, filename: "amira_photo", content_type: "image/png")
+coach4.save!
+
+coach5 = Coach.new(name: "Кристина", filter: "функционалка, сила")
+photo = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691584380/kristina_photo_bnjalz.png")
+coach5.photo.attach(io: photo, filename: "kristina_photo", content_type: "image/png")
+coach5.save!
 
 # coach5 = Coach.new(name: "Темирлан", filter: "сила, функционалка")
 # # photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
