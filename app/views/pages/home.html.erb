@@ -111,7 +111,7 @@
     <div class="page_3_cards">
       <% @coaches.each do |coach| %>
         <div class="card-coach">
-          <%= image_tag coach.photo, height: 270%>
+          <%= cl_image_tag coach.photo.key, height: 270%>
           <div class="card-body">
             <h5 class="card-title"> <%= coach.name%> </h5>
             <button type="button" class="btn btn-green">Записаться</button>
@@ -145,7 +145,7 @@
               </h5>
             </div>
           </div>
-          <a href="#" class="btn btn-light w-100">Купить</a>
+          <a class="btn btn-light w-100">Купить</a>
         </div>
       </div>
       <div class="card-price">
@@ -166,7 +166,7 @@
               </h5>
             </div>
           </div>
-          <a href="#" class="btn btn-light w-100">Купить</a>
+          <a class="btn btn-light w-100">Купить</a>
         </div>
       </div>
       <div class="card-price">
@@ -187,7 +187,7 @@
               </h5>
             </div>
           </div>
-          <a href="#" class="btn btn-light w-100">Купить</a>
+          <a class="btn btn-light w-100">Купить</a>
         </div>
       </div>
       <div class="card-price">
@@ -208,13 +208,12 @@
               </h5>
             </div>
           </div>
-          <a href="#" class="btn btn-light w-100">Купить</a>
+          <a class="btn btn-light w-100">Купить</a>
         </div>
       </div>
     </div>
   </div>
   <br>
-
   <div id="5_page" class="container" style="height:80vh">
     <h1 class="text-center pb-4">Зачем это мне?</h1>
     <div class="page_5_cards">
@@ -223,32 +222,28 @@
         <div class="card-body">
           <h5 class="card-title">Давай честно</h5>
           <p class="card-text">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг будет придумывать тысячи причин, почему позаниматься можно и завтра/в понедельник/после отпуска. Личный тренер будет помогать тебе «не сбиваться» с пути. </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
-        <div class="card-body">
-          <h5 class="card-title">Безопасность и польза</h5>
-          <p class="card-text">Все наши коучи – крутые профессионалы. Мастера спорта с огромным опытом. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую. </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "reason_icon.png"%>
-        <div class="card-body">
-          <h5 class="card-title">Всегда под рукой</h5>
-          <p class="card-text">Бывает, что нет настроение на спорт. А бывает, что рррраааз – и появилось. С нами работают более 20 заряженных профессионалов, так что даже, если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.</div>
-      </div>
-       <div class="card" style="width: 18rem;">
-        <%= image_tag "reason_icon.png"%>
-        <div class="card-body">
-          <h5 class="card-title">Нужен только он</h5>
-          <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
-
-      </div>
-      
-
-    </div>
-  </div>
-
-    <%# <div id="6_page" class="container">
+        </div>
+        <div class="card" style="width: 18rem;">
+          <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
+          <div class="card-body">
+            <h5 class="card-title">Безопасность и польза</h5>
+            <p class="card-text">Все наши коучи – крутые профессионалы. Мастера спорта с огромным опытом. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую. </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <%= image_tag "reason_icon.png"%>
+            <div class="card-body">
+              <h5 class="card-title">Всегда под рукой</h5>
+              <p class="card-text">Бывает, что нет настроение на спорт. А бывает, что рррраааз – и появилось. С нами работают более 20 заряженных профессионалов, так что даже, если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.</div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <%= image_tag "reason_icon.png"%>
+              <div class="card-body">
+                <h5 class="card-title">Нужен только он</h5>
+                <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
+                </div>
+              </div>
+            </div>
+            <%# <div id="6_page" class="container">
             <h1>Наши спортсменки</h1>
             <p>Подключились к фито-крыто и стали такими крутыми. </p>
 
@@ -256,14 +251,14 @@
 
               <div class="card" style="width: 18rem;">
                 <%= image_tag "coach_icon.png"%>
-    <%# <div class="card-body">
+            <%# <div class="card-body">
                       <h5 class="card-title">Ася</h5>
                       <p class="card-text">не занималась уже год</p>
                     </div>
               </div> %>
-    <%# <div class="card" style="width: 18rem;">
+            <%# <div class="card" style="width: 18rem;">
                 <%= image_tag "coach_icon.png"%>
-    <%# <div class="card-body">
+            <%# <div class="card-body">
                       <h5 class="card-title">Маша</h5>
                       <p class="card-text">занимается каждый день</p>
                     </div>
@@ -271,7 +266,7 @@
 
               <div class="card" style="width: 18rem;">
                 <%= image_tag "coach_icon.png"%>
-    <%# <div class="card-body">
+            <%# <div class="card-body">
                       <h5 class="card-title">Ася</h5>
                       <p class="card-text">не занималась уже год</p>
                     </div>
@@ -279,7 +274,7 @@
 
               <div class="card" style="width: 18rem;">
                 <%= image_tag "coach_icon.png"%>
-    <%# <div class="card-body">
+            <%# <div class="card-body">
                       <h5 class="card-title">Маша</h5>
                       <p class="card-text">занимается каждый день</p>
                     </div>
@@ -287,32 +282,31 @@
 
               <div class="card" style="width: 18rem;">
                 <%= image_tag "coach_icon.png"%>
-    <%# <div class="card-body">
+            <%# <div class="card-body">
                       <h5 class="card-title">Ася</h5>
                       <p class="card-text">не занималась уже год</p>
                     </div>
               </div> %>
-    <%# </div> %>
-    <%# </div> %>
-    <br>
-
-    <div id="7_page" class="container" style="height:60vh">
-      <div class="text-center page-content">
-        <div class="page-text">
-          <h1 style="font-weight:800"><strong>Для тренеров и коучей</strong></h1>
-          <p>Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
-          <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
-          <a href="#" class="btn btn-green">
-            <h6>Хочу к вам</h6>
-          </a>
-        </div>
-      </div>
-    </div>
-    <%# <div id="8_page" class="container" style="height:100vh">
+            <%# </div> %>
+            <%# </div> %>
+            <br>
+            <div id="7_page" class="container" style="height:60vh">
+              <div class="text-center page-content">
+                <div class="page-text">
+                  <h1 style="font-weight:800"><strong>Для тренеров и коучей</strong></h1>
+                  <p>Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
+                  <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
+                  <a href="#" class="btn btn-green">
+                    <h6>Хочу к вам</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <%# <div id="8_page" class="container" style="height:100vh">
     <div class="row">
       <div class="col-3">
         <%= image_tag "map.png" %>
-    <%# </div>
+            <%# </div>
       <div class="col-9 contact_form">
         <h1><strong> С дивана на треню</strong></h1>
         <h1><strong> С трени на диван</strong></h1>
@@ -322,76 +316,76 @@
         </div>
       </div>
     </div> %>
-    <%# </div> %>
-  </div>
-</div>
-<script>
-  const header1 = document.getElementById('item-1page');
+            <%# </div> %>
+          </div>
+        </div>
+        <script>
+          const header1 = document.getElementById('item-1page');
 
-  header1.addEventListener('click', function() {
-      const element = document.getElementById("2_page");
-        const y =
-          element.getBoundingClientRect().top +
-          window.pageYOffset -
-          header.offsetHeight -
-          30;
-        if (element) {
-          window.scrollTo({ top: +y, behavior: 'smooth' });
-        }
-      })
+          header1.addEventListener('click', function() {
+              const element = document.getElementById("2_page");
+                const y =
+                  element.getBoundingClientRect().top +
+                  window.pageYOffset -
+                  header.offsetHeight -
+                  30;
+                if (element) {
+                  window.scrollTo({ top: +y, behavior: 'smooth' });
+                }
+              })
 
-  const header2 = document.getElementById('item-2page');
+          const header2 = document.getElementById('item-2page');
 
-  header2.addEventListener('click', function() {
-      const element = document.getElementById("3_page");
-        const y =
-          element.getBoundingClientRect().top +
-          window.pageYOffset -
-          header.offsetHeight -
-          30;
-        if (element) {
-          window.scrollTo({ top: +y, behavior: 'smooth' });
-        }
-      })
-  const header3 = document.getElementById('item-3page');
+          header2.addEventListener('click', function() {
+              const element = document.getElementById("3_page");
+                const y =
+                  element.getBoundingClientRect().top +
+                  window.pageYOffset -
+                  header.offsetHeight -
+                  30;
+                if (element) {
+                  window.scrollTo({ top: +y, behavior: 'smooth' });
+                }
+              })
+          const header3 = document.getElementById('item-3page');
 
-  header3.addEventListener('click', function() {
-      const element = document.getElementById("4_page");
-        const y =
-          element.getBoundingClientRect().top +
-          window.pageYOffset -
-          header.offsetHeight -
-          30;
-        if (element) {
-          window.scrollTo({ top: +y, behavior: 'smooth' });
-        }
-      })
+          header3.addEventListener('click', function() {
+              const element = document.getElementById("4_page");
+                const y =
+                  element.getBoundingClientRect().top +
+                  window.pageYOffset -
+                  header.offsetHeight -
+                  30;
+                if (element) {
+                  window.scrollTo({ top: +y, behavior: 'smooth' });
+                }
+              })
 
-  const header4 = document.getElementById('item-4page');
+          const header4 = document.getElementById('item-4page');
 
-  header4.addEventListener('click', function() {
-      const element = document.getElementById("5_page");
-        const y =
-          element.getBoundingClientRect().top +
-          window.pageYOffset -
-          header.offsetHeight -
-          30;
-        if (element) {
-          window.scrollTo({ top: +y, behavior: 'smooth' });
-        }
-      })
+          header4.addEventListener('click', function() {
+              const element = document.getElementById("5_page");
+                const y =
+                  element.getBoundingClientRect().top +
+                  window.pageYOffset -
+                  header.offsetHeight -
+                  30;
+                if (element) {
+                  window.scrollTo({ top: +y, behavior: 'smooth' });
+                }
+              })
 
-  const header5 = document.getElementById('item-5page');
+          const header5 = document.getElementById('item-5page');
 
-  header5.addEventListener('click', function() {
-      const element = document.getElementById("7_page");
-        const y =
-          element.getBoundingClientRect().top +
-          window.pageYOffset -
-          header.offsetHeight -
-          30;
-        if (element) {
-          window.scrollTo({ top: +y, behavior: 'smooth' });
-        }
-      })
-</script>
+          header5.addEventListener('click', function() {
+              const element = document.getElementById("7_page");
+                const y =
+                  element.getBoundingClientRect().top +
+                  window.pageYOffset -
+                  header.offsetHeight -
+                  30;
+                if (element) {
+                  window.scrollTo({ top: +y, behavior: 'smooth' });
+                }
+              })
+        </script>
