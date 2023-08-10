@@ -85,40 +85,54 @@
     <div>
       <ul class="nav">
         <li class="nav-item">
-          <a class="btn btn-green" href="#">сила</a>
+          <a class="btn btn-outline-dark btn-filter" href="#">сила</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">функционалка</a>
+          <a class="btn btn-outline-dark btn-filter" href="#">функционалка</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">растяжка</a>
+          <a class="btn btn-outline-dark btn-filter" href="#">растяжка</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">мфр</a>
+          <a class="btn btn-outline-dark btn-filter" href="#">мфр</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">фитбокс</a>
+          <a class="btn btn-outline-dark btn-filter" href="#">фитбокс</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">после родов</a>
+          <a class="btn btn-outline-dark btn-filter" href="#">после родов</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-dark" href="#">реабилитация</a>
+          <a class="btn btn-outline-dark btn-filter" href="#">реабилитация</a>
         </li>
       </ul>
     </div>
     <br>
     <div class="page_3_cards">
+
       <% @coaches.each do |coach| %>
-        <div class="card-coach">
-          <%= cl_image_tag coach.photo.key, height: 270%>
-          <div class="card-body">
-            <h5 class="card-title"> <%= coach.name%> </h5>
-            <button type="button" class="btn btn-green">Записаться</button>
-          </div>
-        </div>
+
+              <div class="card-coach">
+                      <%# <div data-controller="coach"> %>
+                            <%# <div data-action="click->coach#changepic" data-coach-index-value="1">
+                                <div data-coach-target="card_to_click"><%= cl_image_tag coach.photos[0].key, height: 270%>
+                                <%# <div data-coach-target="card_to_click"><%= cl_image_tag coach.photos[1].key, height: 270%>
+                            <%# </div> %>
+                      <%# </div> %>
+                <div class="figure">
+                  <div class="image-main"> <%= cl_image_tag coach.photos[0].key, height: 270%></div>
+                  <div class="image-hover"> <%= cl_image_tag coach.photos[1].key, height: 270%></div>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title"> <%= coach.name %> </h5>
+                  <button type="button" class="btn btn-green">Записаться</button>
+                </div>
+
+            </div>
       <% end %>
     </div>
+
   </div>
   <br>
   <div id="4_page" class="container" style="height:70vh">
@@ -181,7 +195,7 @@
             <div class="train-length-item">
               <h5>30</h5>
             </div>
-            <div class="train-length-item-active">
+            <div class="train-length-item">
               <h5>
                 60
               </h5>
@@ -242,7 +256,7 @@
                 <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
                 </div>
               </div>
-            </div>
+  </div>
             <%# <div id="6_page" class="container">
             <h1>Наши спортсменки</h1>
             <p>Подключились к фито-крыто и стали такими крутыми. </p>
@@ -290,7 +304,7 @@
             <%# </div> %>
             <%# </div> %>
             <br>
-            <div id="7_page" class="container" style="height:60vh">
+  <div id="7_page" class="container" style="height:60vh">
               <div class="text-center page-content">
                 <div class="page-text">
                   <h1 style="font-weight:800"><strong>Для тренеров и коучей</strong></h1>

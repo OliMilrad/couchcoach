@@ -1,3 +1,32 @@
 .card-coach {
   border-width : 0;
 }
+// .page_3_cards{
+//   display: flex;
+//   flex-direction: row;
+// }
+
+.figure {
+  position: relative;
+  // width: 360px; /* can be omitted for a regular non-lazy image */
+  max-width: 100%;
+}
+.figure .image-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.figure:hover .image-hover {
+  opacity: 1;
+}
+
+.btn-filter{
+  :active{
+    background-color: #00FF19;
+  }
+}
