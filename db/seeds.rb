@@ -44,6 +44,14 @@ photo2 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691669058
 coach5.photos.attach(io: photo2, filename: "kristina_text", content_type: "image/png")
 coach5.save!
 
+coach6 = Coach.new(name: "Никита", filter: "растяжка, сила")
+photo1 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1692212535/nikita_photo_yhdrfd.png")
+coach6.photos.attach(io: photo1, filename: "nikita_photo", content_type: "image/png")
+photo2 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1692212535/nikita_text_j8mcjf.png")
+coach6.photos.attach(io: photo2, filename: "nikita_text", content_type: "image/png")
+coach6.save!
+
+
 # coach5 = Coach.new(name: "Темирлан", filter: "сила, функционалка")
 # # photo = URI.open("https://res.cloudinary.com/dmn9i4cwm/image/upload/v1678801134/cld-sample.jpg")
 # # user1.photo.attach(io: photo, filename: "lamar.png", content_type: "image/jpg")
