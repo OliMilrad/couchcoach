@@ -126,7 +126,7 @@
 
                 <div class="card-body">
                   <h5 class="card-title"> <%= coach.name %> </h5>
-                  <button type="button" class="btn btn-green">Записаться</button>
+
                 </div>
 
             </div>
@@ -143,23 +143,23 @@
     <div class="page_4_cards">
       <div class="card-price">
         <div class="card-body">
-          <p class="card-text">8 тренировок</p>
-          <h5 class="card-title">89.60 €</h5>
-          <p class="card-text"> 11.20 € за тренировку</p>
-          <p class="card-text"> Ленивая опция для начинающей спортсменки</p>
+          <p class="card-text">1 тренировка</p>
+          <h5 class="card-title">0 €</h5>
+          <p class="card-text"> Первая тренировка</p>
+          <p class="card-text">Занятие - консультация <br> с нашим крутым <br>хэд-коучем</p>
           <hr class="solid">
           <p class="card-text">Тренировка (мин)</p>
           <div class="train-length-wrapper">
             <div class="train-length-item">
               <h5>30</h5>
             </div>
-            <div class="train-length-item-active">
-              <h5>
+            <%# <div class="train-length-item-active"> %>
+              <%# <h5>
                 60
               </h5>
-            </div>
+            </div> %>
           </div>
-          <a class="btn btn-light w-100">Купить</a>
+          <a class="btn btn-light w-100">Хвать!</a>
         </div>
       </div>
       <div class="card-price">
@@ -231,99 +231,53 @@
   <div id="5_page" class="container" style="height:80vh">
     <h1 class="text-center pb-4">Зачем это мне?</h1>
     <div class="page_5_cards">
-      <div class="card" style="width: 350px;">
+      <div class="card davay_chestno" style="width: 350px;">
         <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
           <div class="card-body">
             <h5 class="card-title">Давай честно</h5>
             <p class="card-text" style = "line-height: 1.2">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
           </div>
       </div>
-        <div class="card" style="width: 350px">
+      <div class="card davay_chestno" style="width: 350px">
           <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
             <div class="card-body">
               <h5 class="card-title">Безопасность и польза</h5>
               <p class="card-text"style = "line-height: 1.2">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
             </div>
-        </div>
-          <div class="card" style="width: 350px;">
-            <%= image_tag "reason_icon.png"%>
+      </div>
+      <div class="card davay_chestno" style="width: 350px;">
+            <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
             <div class="card-body">
               <h5 class="card-title">Всегда под рукой</h5>
               <p class="card-text"style = "line-height: 1.2">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
             </div>
-          </div>
-            <div class="card" style="width: 350px;">
-              <%= image_tag "reason_icon.png"%>
+      </div>
+      <div class="card davay_chestno" style="width: 350px;">
+              <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
               <div class="card-body">
                 <h5 class="card-title">Нужен только он</h5>
                 <p class="card-text"style = "line-height: 1.2">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
-                </div>
-            </div>
-           <div class="card" style="width: 350px;">
-              <%= image_tag "reason_icon.png"%>
+              </div>
+      </div>
+      <div class="card davay_chestno" style="width: 350px;">
+              <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
               <div class="card-body">
                 <h5 class="card-title">Можно дома. И не только</h5>
                 <p class="card-text"style = "line-height: 1.2">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
-                </div>
-            </div>
+              </div>
+      </div>
 
-            <div class="card" style="width: 350px;">
-              <%= image_tag "reason_icon.png"%>
+      <div class="card davay_chestno" style="width: 350px;">
+              <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
               <div class="card-body">
                 <h5 class="card-title">Не зашел коуч? Бывает!</h5>
-                <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем.
-Мы найдем тебе того самого.
-                </div>
-            </div>
-
+                <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
+              </div>
        </div>
-            <%# <div id="6_page" class="container">
-            <h1>Наши спортсменки</h1>
-            <p>Подключились к фито-крыто и стали такими крутыми. </p>
 
-            <div class="6_page_cards" style="display:flex">
-
-              <div class="card" style="width: 18rem;">
-                <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
-                      <h5 class="card-title">Ася</h5>
-                      <p class="card-text">не занималась уже год</p>
-                    </div>
-              </div> %>
-            <%# <div class="card" style="width: 18rem;">
-                <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
-                      <h5 class="card-title">Маша</h5>
-                      <p class="card-text">занимается каждый день</p>
-                    </div>
-              </div>
-
-              <div class="card" style="width: 18rem;">
-                <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
-                      <h5 class="card-title">Ася</h5>
-                      <p class="card-text">не занималась уже год</p>
-                    </div>
-              </div>
-
-              <div class="card" style="width: 18rem;">
-                <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
-                      <h5 class="card-title">Маша</h5>
-                      <p class="card-text">занимается каждый день</p>
-                    </div>
-              </div>
-
-              <div class="card" style="width: 18rem;">
-                <%= image_tag "coach_icon.png"%>
-            <%# <div class="card-body">
-                      <h5 class="card-title">Ася</h5>
-                      <p class="card-text">не занималась уже год</p>
-                    </div>
-              </div> %>
-            <%# </div> %>
-            <%# </div> %>
-            <br>
+     </div>
+  </div>
+  <br>
   <div id="7_page" class="container" style="height:60vh">
               <div class="text-center page-content">
                 <div class="page-text">
@@ -335,24 +289,28 @@
                   </a>
                 </div>
               </div>
+  </div>
+  <br>
+  <div id="8_page" class="container" style="height:100vh">
+        <div class="row">
+            <div class="col-3 image_last">
+              <%= image_tag "last_page_couch.png"%>
             </div>
-            <%# <div id="8_page" class="container" style="height:100vh">
-    <div class="row">
-      <div class="col-3">
-        <%= image_tag "map.png" %>
-            <%# </div>
-      <div class="col-9 contact_form">
-        <h1><strong> С дивана на треню</strong></h1>
-        <h1><strong> С трени на диван</strong></h1>
-        <div style="display:flex">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-facebook-f"></i>
-        </div>
-      </div>
-    </div> %>
-            <%# </div> %>
-          </div>
-        </div>
+            <div class="col-9">
+              <h1><strong> С дивана на треню</strong></h1>
+              <h1><strong> С трени на диван</strong></h1>
+                  <div style="display:flex">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </div>
+            </div>
+         </div>
+  </div>
+
+
+</div>
+
+
         <script>
           const header1 = document.getElementById('item-1page');
 
@@ -371,7 +329,7 @@
           const header2 = document.getElementById('item-2page');
 
           header2.addEventListener('click', function() {
-              const element = document.getElementById("3_page");
+              const element = document.getElementById("3_page"); %>
                 const y =
                   element.getBoundingClientRect().top +
                   window.pageYOffset -
