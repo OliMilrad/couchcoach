@@ -9,6 +9,13 @@ require "open-uri"
 
 Coach.destroy_all
 
+coach0 = Coach.new(name: "Алёна", filter: "функционалка, сила, растяжка, фитбокс, мфр, после родов, реабилитация")
+photo1 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1692694804/alena_photo_z4gi8m.png")
+coach0.photos.attach(io: photo1, filename: "alena_photo", content_type: "image/png")
+photo2 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1692694804/alena_text_fdu60r.png")
+coach0.photos.attach(io: photo2, filename: "alena_text", content_type: "image/png")
+coach0.save!
+
 coach1 = Coach.new(name: "Евгений", filter: "функционалка, сила, растяжка, фитбокс")
 photo1 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691581163/golub_photo_a6hbfe.png")
 coach1.photos.attach(io: photo1, filename: "golub_photo", content_type: "image/png")

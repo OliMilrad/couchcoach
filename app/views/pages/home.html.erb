@@ -79,7 +79,7 @@
     </div>
   </div>
   <br>
-  <div id="3_page" class="container" style="height:80vh">
+  <div id="3_page coaches" class="container" style="height:80vh">
      <div data-controller="coach">
       <h1 style="font-weight: 900; text-align:center;">Наши коучи</h1>
       <br>
@@ -104,7 +104,7 @@
             <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">после родов</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter"> реабилитация</a>
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">реабилитация</a>
           </li>
         </ul>
       </div>
@@ -140,100 +140,103 @@
 
   </div>
   <br>
-  <div id="4_page" class="container" style="height:70vh">
+  <div id="4_page prices" class="container" style="height:70vh">
     <div class="page_4_text text-center">
       <h1>Пробное занятие – бесплатно</h1>
       <p>Без предоплаты. Полноценная тренировка длительностью 30 минут с индивидуально подобранным тренером</p>
     </div>
-    <div class="page_4_cards">
-      <div class="card-price">
-        <div class="card-body">
-          <p class="card-text">1 тренировка</p>
-          <h5 class="card-title">0 €</h5>
-          <p class="card-text"> Первая тренировка</p>
-          <p class="card-text">Занятие - консультация <br> с нашим крутым <br>хэд-коучем</p>
-          <hr class="solid">
-          <p class="card-text">Тренировка (мин)</p>
-          <div class="train-length-wrapper">
-            <div class="train-length-item">
-              <h5>30</h5>
+    <div data-controller="price">
+      <div class="page_4_cards">
+
+        <div class="card-price">
+          <div class="card-body">
+            <p class="card-text">1 тренировка</p>
+            <h5 class="card-title">0 €</h5>
+            <p class="card-text"> Первая тренировка</p>
+            <p class="card-text">Занятие - консультация <br> с нашим крутым <br>хэд-коучем</p>
+            <hr class="solid">
+            <p class="card-text">Тренировка (мин)</p>
+            <div class="train-length-wrapper">
+              <div class="train-length-item">
+                <h5>30</h5>
+              </div>
+              <%# <div class="train-length-item-active"> %>
+                <%# <h5>
+                  60
+                </h5>
+              </div> %>
             </div>
-            <%# <div class="train-length-item-active"> %>
-              <%# <h5>
-                60
-              </h5>
-            </div> %>
+            <a class="btn btn-light w-100">Хвать!</a>
           </div>
-          <a class="btn btn-light w-100">Хвать!</a>
         </div>
-      </div>
-      <div class="card-price">
-        <div class="card-body">
-          <p class="card-text">24 тренировки</p>
-          <h5 class="card-title">223.20 €</h5>
-          <p class="card-text"> 9.30 € за тренировку</p>
-          <p class="card-text"> Выгодная опция для начинающей спортсменки</p>
-          <hr class="solid">
-          <p class="card-text">Тренировка (мин)</p>
-          <div class="train-length-wrapper">
-            <div class="train-length-item">
-              <h5>30</h5>
+        <div class="card-price">
+          <div class="card-body">
+            <p class="card-text">24 тренировки</p>
+            <h5 class="card-title">223.20 €</h5>
+            <p class="card-text"> 9.30 € за тренировку</p>
+            <p class="card-text"> Выгодная опция для начинающей спортсменки</p>
+            <hr class="solid">
+            <p class="card-text">Тренировка (мин)</p>
+            <div class="train-length-wrapper">
+              <div class="train-length-item">
+                <h5>30</h5>
+              </div>
+              <div class="train-length-item-active">
+                <h5>
+                  60
+                </h5>
+              </div>
             </div>
-            <div class="train-length-item-active">
-              <h5>
-                60
-              </h5>
-            </div>
+            <a class="btn btn-light w-100">Купить</a>
           </div>
-          <a class="btn btn-light w-100">Купить</a>
         </div>
-      </div>
-      <div class="card-price">
-        <div class="card-body">
-          <p class="card-text">36 тренировок</p>
-          <h5 class="card-title">306 €</h5>
-          <p class="card-text"> 8.50 € за тренировку</p>
-          <p class="card-text"> Крутая опция для начинающей спортсменки</p>
-          <hr class="solid">
-          <p class="card-text">Тренировка (мин)</p>
-          <div class="train-length-wrapper">
-            <div class="train-length-item">
-              <h5>30</h5>
+        <div class="card-price">
+          <div class="card-body">
+            <p class="card-text">36 тренировок</p>
+            <h5 class="card-title">306 €</h5>
+            <p class="card-text"> 8.50 € за тренировку</p>
+            <p class="card-text"> Крутая опция для начинающей спортсменки</p>
+            <hr class="solid">
+            <p class="card-text">Тренировка (мин)</p>
+            <div class="train-length-wrapper">
+              <div class="train-length-item">
+                <h5>30</h5>
+              </div>
+              <div class="train-length-item">
+                <h5>
+                  60
+                </h5>
+              </div>
             </div>
-            <div class="train-length-item">
-              <h5>
-                60
-              </h5>
-            </div>
+            <a class="btn btn-light w-100">Купить</a>
           </div>
-          <a class="btn btn-light w-100">Купить</a>
         </div>
-      </div>
-      <div class="card-price">
-        <div class="card-body">
-          <p class="card-text">72 трeнировки</p>
-          <h5 class="card-title">568 €</h5>
-          <p class="card-text"> 7.90 € за тренировку</p>
-          <p class="card-text">Экономная опция для начинающей спортсменки</p>
-          <hr class="solid">
-          <p class="card-text">Тренировка (мин)</p>
-          <div class="train-length-wrapper">
-            <div class="train-length-item">
-              <h5>30</h5>
+        <div class="card-price">
+          <div class="card-body">
+            <p class="card-text">72 трeнировки</p>
+            <h5 class="card-title">568 €</h5>
+            <p class="card-text"> 7.90 € за тренировку</p>
+            <p class="card-text">Экономная опция для начинающей спортсменки</p>
+            <hr class="solid">
+            <p class="card-text">Тренировка (мин)</p>
+            <div class="train-length-wrapper">
+              <div class="train-length-item">
+                <h5>30</h5>
+              </div>
+              <div class="train-length-item-active">
+                <h5>
+                  60
+                </h5>
+              </div>
             </div>
-            <div class="train-length-item-active">
-              <h5>
-                60
-              </h5>
-            </div>
+            <a class="btn btn-light w-100">Купить</a>
           </div>
-          <a class="btn btn-light w-100">Купить</a>
         </div>
       </div>
     </div>
   </div>
   <br>
-  <div id="5_page" class="container" style="height:80vh">
+  <div id="5_page davai_chestno" class="container" style="height:80vh">
     <h1 class="text-center pb-4">Зачем это мне?</h1>
     <div class="page_5_cards">
       <div class="card davay_chestno" style="width: 350px;">
