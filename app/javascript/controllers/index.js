@@ -10,5 +10,5 @@ application.register("hello", HelloController)
 import CoachController from "./coach_controller"
 application.register("coach", CoachController)
 
-import CoachController from "./price_controller"
+import PriceController from "./price_controller"
 application.register("price", PriceController)
