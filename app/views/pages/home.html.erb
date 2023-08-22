@@ -80,57 +80,62 @@
   </div>
   <br>
   <div id="3_page" class="container" style="height:80vh">
-    <h1 style="font-weight: 900; text-align:center;">Наши коучи</h1>
-    <br>
-    <div>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="btn btn-outline-dark btn-filter" href="#">сила</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark btn-filter" href="#">функционалка</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark btn-filter" href="#">растяжка</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark btn-filter" href="#">мфр</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark btn-filter" href="#">фитбокс</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark btn-filter" href="#">после родов</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-dark btn-filter" href="#">реабилитация</a>
-        </li>
-      </ul>
-    </div>
-    <br>
-    <div class="page_3_cards">
+     <div data-controller="coach">
+      <h1 style="font-weight: 900; text-align:center;">Наши коучи</h1>
+      <br>
+      <div>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="btn btn-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">сила</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">функционалка</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">растяжка</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">мфр</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">фитбокс</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">после родов</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter"> реабилитация</a>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <div class="page_3_cards">
 
-      <% @coaches.each do |coach| %>
+        <% @coaches.each do |coach| %>
 
-              <div class="card-coach">
-                      <%# <div data-controller="coach"> %>
-                            <%# <div data-action="click->coach#changepic" data-coach-index-value="1">
-                                <div data-coach-target="card_to_click"><%= cl_image_tag coach.photos[0].key, height: 270%>
-                                <%# <div data-coach-target="card_to_click"><%= cl_image_tag coach.photos[1].key, height: 270%>
-                            <%# </div> %>
-                      <%# </div> %>
-                <div class="figure">
-                  <div class="image-main"> <%= cl_image_tag coach.photos[0].key, height: 270%></div>
-                  <div class="image-hover"> <%= cl_image_tag coach.photos[1].key, height: 270%></div>
-                </div>
 
-                <div class="card-body">
-                  <h5 class="card-title"> <%= coach.name %> </h5>
 
-                </div>
+                <div class="card-coach"  data-coach-target="coach_card" id="<%=coach.id%>" filter_we_need="<%=coach.filter%>" >
+                        <%# <div data-controller="coach"> %>
+                              <%# <div data-action="click->coach#changepic" data-coach-index-value="1">
+                                  <div data-coach-target="card_to_click"><%= cl_image_tag coach.photos[0].key, height: 270%>
+                                  <%# <div data-coach-target="card_to_click"><%= cl_image_tag coach.photos[1].key, height: 270%>
+                              <%# </div> %>
+                        <%# </div> %>
+                  <div class="figure">
+                    <div class="image-main"> <%= cl_image_tag coach.photos[0].key, height: 270%></div>
+                    <div class="image-hover"> <%= cl_image_tag coach.photos[1].key, height: 270%></div>
+                  </div>
 
-            </div>
-      <% end %>
+
+                  <div class="card-body">
+                    <h5 class="card-title"> <%= coach.name %> </h5>
+
+                  </div>
+
+              </div>
+        <% end %>
+      </div>
     </div>
 
   </div>
@@ -311,7 +316,7 @@
 </div>
 
 
-        <script>
+<script>
           const header1 = document.getElementById('item-1page');
 
           header1.addEventListener('click', function() {
@@ -329,7 +334,7 @@
           const header2 = document.getElementById('item-2page');
 
           header2.addEventListener('click', function() {
-              const element = document.getElementById("3_page"); %>
+              const element = document.getElementById("3_page");
                 const y =
                   element.getBoundingClientRect().top +
                   window.pageYOffset -
