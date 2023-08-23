@@ -1,9 +1,9 @@
 <div id="header" class="header">
-  <div class="text-center">
+  <div class="text-center logo">
     <%= image_tag "logo_main.png" %>
   </div>
-  <br>
-  <div class="text-center">
+
+  <div class="text-center menu">
     <div class="header-items">
       <ul id="item-1page">
         <p>как это работает?</p>
@@ -30,7 +30,7 @@
 <div  style="padding-right:140px; padding-left:140px;">
   <div id="1_page" class="container" style="display:flex; justify-content:space-around; height:70vh; align-items:center;">
     <div class="1_page_text">
-      <h1 style="font-weight: 900; font-size: 65px; line-height: 85%;">Персональный фитнес коуч онлайн</h1>
+      <h1 style="font-weight: 800; font-size: 65px; line-height: 69px;">Персональный фитнес коуч онлайн</h1>
       <p><i class="fa-solid fa-arrow-right"></i> в удобное для тебя время</p>
       <p><i class="fa-solid fa-arrow-right"></i> не за бешеные бабки</p>
       <p><i class="fa-solid fa-arrow-right"></i> не надо ехать на треню в метро
@@ -47,8 +47,8 @@
   <br>
   <div id="2_page" class="container" style="display:flex; flex-direction: column; height:40vh; align-items: center;">
     <div class="2_page_text text-center">
-      <h1><strong>Как это работает?</strong></h1>
-      <p>55 минут драйва с настоящим профи тренером, который проведёт с тобой комплексную тренировку.</p>
+      <h1 style="font-weight: 800; font-size: 65px;">Как это работает?</h1>
+      <p>60 минут драйва с настоящим профи тренером, который проведёт с тобой комплексную тренировку.</p>
       <p>Пс-с. Да, если не зайдет – можно просто отключить интернет.  </p>
     </div>
     <div class="page_2_graph">
@@ -79,10 +79,10 @@
     </div>
   </div>
   <br>
-  <div id="3_page coaches" class="container" style="height:80vh">
+  <div id="3_page" class="container" style="height:80vh">
      <div data-controller="coach">
-      <h1 style="font-weight: 900; text-align:center;">Наши коучи</h1>
-      <br>
+      <h1 style="font-weight: 800; text-align:center; font-size: 65px; ">Наши коучи</h1>
+
       <div>
         <ul class="nav">
           <li class="nav-item">
@@ -111,39 +111,42 @@
       <br>
       <div class="page_3_cards">
 
+      <div class="card-coach"  filter_we_need="<%=@head_coach.filter%>" >
+                  <div class="figure">
+                    <div class="image-main"> <%= cl_image_tag @head_coach.photos[0].key, height: 270%></div>
+                    <div class="image-hover"> <%= cl_image_tag @head_coach.photos[1].key, height: 270%></div>
+                  </div>
+
+
+                  <div class="card-body" style="padding-top:20px; padding-bottom:20px">
+                    <h5 class="card-title"> <%= @head_coach.name %> </h5>
+                  </div>
+              </div>
+
         <% @coaches.each do |coach| %>
 
-
-
                 <div class="card-coach"  data-coach-target="coach_card" id="<%=coach.id%>" filter_we_need="<%=coach.filter%>" >
-                        <%# <div data-controller="coach"> %>
-                              <%# <div data-action="click->coach#changepic" data-coach-index-value="1">
-                                  <div data-coach-target="card_to_click"><%= cl_image_tag coach.photos[0].key, height: 270%>
-                                  <%# <div data-coach-target="card_to_click"><%= cl_image_tag coach.photos[1].key, height: 270%>
-                              <%# </div> %>
-                        <%# </div> %>
                   <div class="figure">
                     <div class="image-main"> <%= cl_image_tag coach.photos[0].key, height: 270%></div>
                     <div class="image-hover"> <%= cl_image_tag coach.photos[1].key, height: 270%></div>
                   </div>
 
 
-                  <div class="card-body">
+                  <div class="card-body" style="padding-top:20px">
                     <h5 class="card-title"> <%= coach.name %> </h5>
-
                   </div>
-
               </div>
+
         <% end %>
       </div>
     </div>
 
   </div>
   <br>
-  <div id="4_page prices" class="container" style="height:70vh">
+  <div id="4_page" class="container" style="height:70vh">
     <div class="page_4_text text-center">
       <h1>Пробное занятие – бесплатно</h1>
-      <p>Без предоплаты. Полноценная тренировка длительностью 30 минут с индивидуально подобранным тренером</p>
+      <p>Без предоплаты. Полноценная тренировка длительностью 30 минут с нашим хэд-коучем.</p>
     </div>
     <div data-controller="price">
       <div class="page_4_cards">
@@ -151,7 +154,7 @@
         <div class="card-price">
           <div class="card-body">
             <p class="card-text">1 тренировка</p>
-            <h5 class="card-title">0 €</h5>
+            <h5 class="card-title">0 ₽</h5>
             <p class="card-text"> Первая тренировка</p>
             <p class="card-text">Занятие - консультация <br> с нашим крутым <br>хэд-коучем</p>
             <hr class="solid">
@@ -171,9 +174,10 @@
         </div>
         <div class="card-price">
           <div class="card-body">
-            <p class="card-text">24 тренировки</p>
-            <h5 class="card-title">223.20 €</h5>
-            <p class="card-text"> 9.30 € за тренировку</p>
+            <p class="card-text">4 тренировки</p>
+            <h5 class="card-title">1235 ₽</h5>
+            <p class="card-text"> за 1 тренировку</p>
+            <p class="card-text"> 5200/4940</p>
             <p class="card-text"> Выгодная опция для начинающей спортсменки</p>
             <hr class="solid">
             <p class="card-text">Тренировка (мин)</p>
@@ -192,7 +196,7 @@
         </div>
         <div class="card-price">
           <div class="card-body">
-            <p class="card-text">36 тренировок</p>
+            <p class="card-text">8 тренировок</p>
             <h5 class="card-title">306 €</h5>
             <p class="card-text"> 8.50 € за тренировку</p>
             <p class="card-text"> Крутая опция для начинающей спортсменки</p>
@@ -213,7 +217,7 @@
         </div>
         <div class="card-price">
           <div class="card-body">
-            <p class="card-text">72 трeнировки</p>
+            <p class="card-text">24 трeнировки</p>
             <h5 class="card-title">568 €</h5>
             <p class="card-text"> 7.90 € за тренировку</p>
             <p class="card-text">Экономная опция для начинающей спортсменки</p>
@@ -232,12 +236,13 @@
             <a class="btn btn-light w-100">Купить</a>
           </div>
         </div>
+
       </div>
     </div>
   </div>
   <br>
-  <div id="5_page davai_chestno" class="container" style="height:80vh">
-    <h1 class="text-center pb-4">Зачем это мне?</h1>
+  <div id="5_page" class="container" style="height:80vh">
+    <h1 class="text-center pb-4" style="font-size: 65px;">Зачем это мне?</h1>
     <div class="page_5_cards">
       <div class="card davay_chestno" style="width: 350px;">
         <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
@@ -286,11 +291,11 @@
      </div>
   </div>
   <br>
-  <div id="7_page" class="container" style="height:60vh">
+  <div id="7_page" class="container" style="height:80vh">
               <div class="text-center page-content">
                 <div class="page-text">
-                  <h1 style="font-weight:800"><strong>Для тренеров и коучей</strong></h1>
-                  <p>Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
+                  <h1 style="font-weight:800; font-size: 60px; font-style: normal;">Для тренеров и коучей</h1>
+                  <p >Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
                   <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
                   <a href="#" class="btn btn-green">
                     <h6>Хочу к вам</h6>
@@ -308,8 +313,8 @@
               <h1><strong> С дивана на треню</strong></h1>
               <h1><strong> С трени на диван</strong></h1>
                   <div style="display:flex">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram" style="font-size:40px; color:#00FF19; padding-right: 30px"></i>
+                    <i class="fa-brands fa-facebook-f"style="font-size:40px; color:#00FF19"></i>
                   </div>
             </div>
          </div>
