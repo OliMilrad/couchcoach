@@ -31,7 +31,7 @@
   <div id="1_page" class="container" style="display:flex; justify-content:space-around; height:70vh; align-items:center;">
     <div class="1_page_text">
       <h1 style="font-weight: 800; font-size: 65px; line-height: 69px;">Персональный фитнес коуч онлайн</h1>
-      <p><i class="fa-solid fa-arrow-right"></i> в удобное для тебя время</p>
+      <p style="font-size: 23px; font-weight: 350;"><i class="fa-solid fa-arrow-right"></i> в удобное для тебя время</p>
       <p><i class="fa-solid fa-arrow-right"></i> не за бешеные бабки</p>
       <p><i class="fa-solid fa-arrow-right"></i> не надо ехать на треню в метро
         (и даже трамвае)</p>
@@ -160,14 +160,9 @@
             <hr class="solid">
             <p class="card-text">Тренировка (мин)</p>
             <div class="train-length-wrapper">
-              <div class="train-length-item">
+              <div class="train-length-item-active">
                 <h5>30</h5>
               </div>
-              <%# <div class="train-length-item-active"> %>
-                <%# <h5>
-                  60
-                </h5>
-              </div> %>
             </div>
             <a class="btn btn-light w-100">Хвать!</a>
           </div>
@@ -175,41 +170,38 @@
         <div class="card-price">
           <div class="card-body">
             <p class="card-text">4 тренировки</p>
-            <h5 class="card-title">1235 ₽</h5>
+            <h5 class="card-title" data-price-target="four_card_price_to_change">1235 ₽</h5>
             <p class="card-text"> за 1 тренировку</p>
-            <p class="card-text"> 5200/4940</p>
-            <p class="card-text"> Выгодная опция для начинающей спортсменки</p>
+            <p class="card-text" data-price-target="four_card_full_price_to_change"> <span style="text-decoration:line-through; text-decoration-thickness:1px">5200</span>/4940 ₽</p>
+            <p class="card-text"> Скидка 5%</p>
             <hr class="solid">
             <p class="card-text">Тренировка (мин)</p>
             <div class="train-length-wrapper">
-              <div class="train-length-item">
-                <h5>30</h5>
+              <div class="train-length-item" data-price-target="four_card_half_time_to_change">
+                <h5 data-action="click->price#changetime_four">30</h5>
               </div>
-              <div class="train-length-item-active">
-                <h5>
-                  60
-                </h5>
+              <div class="train-length-item-active" data-price-target="four_card_full_time_to_change">
+                <h5 data-action="click->price#changetime_four">60</h5>
               </div>
             </div>
             <a class="btn btn-light w-100">Купить</a>
           </div>
         </div>
-        <div class="card-price">
+        <div class="card-price" >
           <div class="card-body">
             <p class="card-text">8 тренировок</p>
-            <h5 class="card-title">306 €</h5>
-            <p class="card-text"> 8.50 € за тренировку</p>
-            <p class="card-text"> Крутая опция для начинающей спортсменки</p>
+            <h5 class="card-title" data-price-target="eight_card_price_to_change">1183 ₽</h5>
+            <p class="card-text"> за 1 тренировку</p>
+            <p class="card-text" data-price-target="eight_card_full_price_to_change"> <span style="text-decoration:line-through; text-decoration-thickness:1px">10400</span>/9464 ₽</p>
+            <p class="card-text"> Скидка 9%</p>
             <hr class="solid">
             <p class="card-text">Тренировка (мин)</p>
             <div class="train-length-wrapper">
-              <div class="train-length-item">
-                <h5>30</h5>
+              <div class="train-length-item" data-price-target="eight_card_half_time_to_change">
+                <h5 data-action="click->price#changetime_eight">30</h5>
               </div>
-              <div class="train-length-item">
-                <h5>
-                  60
-                </h5>
+              <div class="train-length-item-active" data-price-target="eight_card_full_time_to_change">
+                <h5 data-action="click->price#changetime_eight">60</h5>
               </div>
             </div>
             <a class="btn btn-light w-100">Купить</a>
@@ -217,25 +209,26 @@
         </div>
         <div class="card-price">
           <div class="card-body">
-            <p class="card-text">24 трeнировки</p>
-            <h5 class="card-title">568 €</h5>
-            <p class="card-text"> 7.90 € за тренировку</p>
-            <p class="card-text">Экономная опция для начинающей спортсменки</p>
+            <p class="card-text">24 тренировки</p>
+            <h5 class="card-title" data-price-target="twfour_card_price_to_change">1040 ₽</h5>
+            <p class="card-text"> за 1 тренировку</p>
+            <p class="card-text" data-price-target="twfour_card_full_price_to_change"> <span style="text-decoration:line-through; text-decoration-thickness:1px">31200</span>/24960 ₽</p>
+            <p class="card-text"> Скидка 15%</p>
             <hr class="solid">
             <p class="card-text">Тренировка (мин)</p>
             <div class="train-length-wrapper">
-              <div class="train-length-item">
-                <h5>30</h5>
+              <div class="train-length-item" data-price-target="twfour_card_half_time_to_change">
+                <h5 data-action="click->price#changetime_twfour">30</h5>
               </div>
-              <div class="train-length-item-active">
-                <h5>
-                  60
-                </h5>
+              <div class="train-length-item-active" data-price-target="twfour_card_full_time_to_change">
+                <h5 data-action="click->price#changetime_twfour">60</h5>
               </div>
             </div>
             <a class="btn btn-light w-100">Купить</a>
           </div>
         </div>
+
+
 
       </div>
     </div>
@@ -295,11 +288,14 @@
               <div class="text-center page-content">
                 <div class="page-text">
                   <h1 style="font-weight:800; font-size: 60px; font-style: normal;">Для тренеров и коучей</h1>
-                  <p >Если ты талантливый коуч, любишь диваны и людей – оставь свои контакты, мы тебе напишем. </p>
+                  <p >Если ты талантливый коуч, любишь диваны и людей – <br> оставь свои контакты, мы тебе напишем. </p>
                   <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
                   <a href="#" class="btn btn-green">
                     <h6>Хочу к вам</h6>
                   </a>
+
+
+    <lottie-player src="https://lottie.host/9c20c2a1-52ef-49c8-956a-c1ea918011fc/uFBTqBYqPX.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
                 </div>
               </div>
   </div>

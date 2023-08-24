@@ -1,23 +1,32 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap");
 
 // Define fonts for body and headers
 $body-font: "Circalight";
 $headers-font: "Circa";
 
 // To use a font file (.woff) uncomment following lines
- @font-face {
+@font-face {
   font-family: "Circa";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-src: asset-url('CRC75.woff') format('woff')
-//        font-url('FontFile.ttf') format('truetype')
- }
- @font-face {
+  //   src: font-url('FontFile.eot');
+  //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  src: asset-url("CRC75.woff") format("woff");
+  //        font-url('FontFile.ttf') format('truetype')
+}
+@font-face {
   font-family: "Circalight";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-src: asset-url('CRC35.woff') format('woff')
-//        font-url('FontFile.ttf') format('truetype')
- }
- $my-font: "Circa";
+  //   src: font-url('FontFile.eot');
+  //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  src: asset-url("CRC25.woff") format("woff");
+  //        font-url('FontFile.ttf') format('truetype')
+}
+$my-font: "Circa";
+
+
+@font-face {
+  font-family: "CircaExtralight";
+  //   src: font-url('FontFile.eot');
+  //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  src: asset-url("CRC35.woff") format("woff");
+  //        font-url('FontFile.ttf') format('truetype')
+}
