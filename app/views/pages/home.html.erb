@@ -2,7 +2,6 @@
   <div class="text-center logo">
     <%= image_tag "logo_main.png" %>
   </div>
-
   <div class="text-center menu">
     <div class="header-items">
       <ul id="item-1page">
@@ -29,19 +28,34 @@
 <br>
 <div  style="padding-right:140px; padding-left:140px;">
   <div id="1_page" class="container" style="display:flex; justify-content:space-around; height:70vh; align-items:center;">
-    <div class="1_page_text">
-      <h1 style="font-weight: 800; font-size: 65px; line-height: 69px;">Персональный фитнес коуч онлайн</h1>
-      <p style="font-size: 23px; font-weight: 350;"><i class="fa-solid fa-arrow-right"></i> в удобное для тебя время</p>
-      <p> <%= image_tag "Arrow_1.png"%>не за бешеные бабки</p>
-      <p><i class="fa-solid fa-arrow-right"></i> не надо ехать на треню в метро
-        (и даже трамвае)</p>
-      <p><i class="fa-solid fa-arrow-right"></i> напрягаться надо
-        (но немного и в удовольствие)</p>
-      <p style="font-weight: 900"><i class="fa-solid fa-arrow-right"></i> первое занятие – бесплатно </p>
-      <button type="button" class="btn btn-green">Го на спорт</button>
+    <div class="info_text_1 container overflow-hidden">
+      <h1 style="font-size: 60px; line-height: 55px; margin-bottom: 15px;">Персональный фитнес коуч онлайн</h1>
+      <div class="row">
+        <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="line-height: 25px"> в удобное для тебя время </div>
+      </div>
+      <div class="row">
+        <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="line-height: 25px"> не за бешеные бабки </div>
+      </div>
+      <div class="row">
+        <div class="col-1" style="line-height: 20px"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="line-height: 20px">  не надо ехать на треню в метро <br>
+          (и даже трамвае)</div>
+      </div>
+      <div class="row">
+        <div class="col-1" style="line-height: 20px"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="line-height: 20px">  напрягаться надо<br>
+          (но немного и в удовольствие)</div>
+      </div>
+      <div class="row">
+        <div class="col-1"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="font-weight: 700; font-size: 20px; font-family:Circamedium; line-height: 25px">первое занятие – бесплатно</div>
+      </div>
+      <button type="button" class="btn btn-green btn-firstpage" style="font-family:Circamedium; font-weight: 800; font-size: 18px">Го на спорт!</button>
     </div>
     <div class="1_page_video">
-      <%= image_tag "video_place.png", width: 650 %>
+      <%= image_tag "video_place.png", width: 670 %>
     </div>
   </div>
   <br>
@@ -80,9 +94,8 @@
   </div>
   <br>
   <div id="3_page" class="container" style="height:80vh">
-     <div data-controller="coach">
+    <div data-controller="coach">
       <h1 style="font-weight: 800; text-align:center; font-size: 65px; ">Наши коучи</h1>
-
       <div>
         <ul class="nav">
           <li class="nav-item">
@@ -110,37 +123,28 @@
       </div>
       <br>
       <div class="page_3_cards">
-
-      <div class="card-coach"  filter_we_need="<%=@head_coach.filter%>" >
-                  <div class="figure">
-                    <div class="image-main"> <%= cl_image_tag @head_coach.photos[0].key, height: 270%></div>
-                    <div class="image-hover"> <%= cl_image_tag @head_coach.photos[1].key, height: 270%></div>
-                  </div>
-
-
-                  <div class="card-body" style="padding-top:20px; padding-bottom:20px">
-                    <h5 class="card-title"> <%= @head_coach.name %> </h5>
-                  </div>
-              </div>
-
+        <div class="card-coach"  filter_we_need="<%=@head_coach.filter%>" >
+          <div class="figure">
+            <div class="image-main"> <%= cl_image_tag @head_coach.photos[0].key, height: 270%></div>
+            <div class="image-hover"> <%= cl_image_tag @head_coach.photos[1].key, height: 270%></div>
+          </div>
+          <div class="card-body" style="padding-top:20px; padding-bottom:20px">
+            <h5 class="card-title"> <%= @head_coach.name %> </h5>
+          </div>
+        </div>
         <% @coaches.each do |coach| %>
-
-                <div class="card-coach"  data-coach-target="coach_card" id="<%=coach.id%>" filter_we_need="<%=coach.filter%>" >
-                  <div class="figure">
-                    <div class="image-main"> <%= cl_image_tag coach.photos[0].key, height: 270%></div>
-                    <div class="image-hover"> <%= cl_image_tag coach.photos[1].key, height: 270%></div>
-                  </div>
-
-
-                  <div class="card-body" style="padding-top:20px">
-                    <h5 class="card-title"> <%= coach.name %> </h5>
-                  </div>
-              </div>
-
+          <div class="card-coach"  data-coach-target="coach_card" id="<%=coach.id%>" filter_we_need="<%=coach.filter%>" >
+            <div class="figure">
+              <div class="image-main"> <%= cl_image_tag coach.photos[0].key, height: 270%></div>
+              <div class="image-hover"> <%= cl_image_tag coach.photos[1].key, height: 270%></div>
+            </div>
+            <div class="card-body" style="padding-top:20px">
+              <h5 class="card-title"> <%= coach.name %> </h5>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
-
   </div>
   <br>
   <div id="4_page" class="container" style="height:70vh">
@@ -150,13 +154,14 @@
     </div>
     <div data-controller="price">
       <div class="page_4_cards">
-
         <div class="card-price">
           <div class="card-body">
             <p class="card-text">1 тренировка</p>
             <h5 class="card-title">0 ₽</h5>
             <p class="card-text"> Первая тренировка</p>
-            <p class="card-text">Занятие - консультация <br> с нашим крутым <br>хэд-коучем</p>
+            <p class="card-text">Занятие - консультация <br>
+              с нашим крутым <br>
+              хэд-коучем</p>
             <hr class="solid">
             <p class="card-text">Тренировка (мин)</p>
             <div class="train-length-wrapper">
@@ -227,9 +232,6 @@
             <a class="btn btn-light w-100">Купить</a>
           </div>
         </div>
-
-
-
       </div>
     </div>
   </div>
@@ -239,154 +241,147 @@
     <div class="page_5_cards">
       <div class="card davay_chestno" style="width: 350px;">
         <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
-          <div class="card-body">
-            <h5 class="card-title">Давай честно</h5>
-            <p class="card-text" style = "line-height: 1.2">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
+        <div class="card-body">
+          <h5 class="card-title">Давай честно</h5>
+          <p class="card-text" style = "line-height: 1.2">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
           </div>
-      </div>
-      <div class="card davay_chestno" style="width: 350px">
+        </div>
+        <div class="card davay_chestno" style="width: 350px">
           <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
-            <div class="card-body">
-              <h5 class="card-title">Безопасность и польза</h5>
-              <p class="card-text"style = "line-height: 1.2">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
+          <div class="card-body">
+            <h5 class="card-title">Безопасность и польза</h5>
+            <p class="card-text"style = "line-height: 1.2">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
             </div>
-      </div>
-      <div class="card davay_chestno" style="width: 350px;">
+          </div>
+          <div class="card davay_chestno" style="width: 350px;">
             <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
             <div class="card-body">
               <h5 class="card-title">Всегда под рукой</h5>
               <p class="card-text"style = "line-height: 1.2">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
+              </div>
             </div>
-      </div>
-      <div class="card davay_chestno" style="width: 350px;">
+            <div class="card davay_chestno" style="width: 350px;">
               <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
               <div class="card-body">
                 <h5 class="card-title">Нужен только он</h5>
                 <p class="card-text"style = "line-height: 1.2">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
-              </div>
-      </div>
-      <div class="card davay_chestno" style="width: 350px;">
-              <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
-              <div class="card-body">
-                <h5 class="card-title">Можно дома. И не только</h5>
-                <p class="card-text"style = "line-height: 1.2">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
-              </div>
-      </div>
-
-      <div class="card davay_chestno" style="width: 350px;">
-              <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
-              <div class="card-body">
-                <h5 class="card-title">Не зашел коуч? Бывает!</h5>
-                <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
-              </div>
-       </div>
-
-     </div>
-  </div>
-  <br>
-  <div id="7_page" class="container" style="height:80vh">
-              <div class="text-center page-content">
-                <div class="page-text">
-                  <h1 style="font-weight:800; font-size: 60px; font-style: normal;">Для тренеров и коучей</h1>
-                  <p >Если ты талантливый коуч, любишь диваны и людей – <br> оставь свои контакты, мы тебе напишем. </p>
-                  <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
-                  <a href="#" class="btn btn-green">
-                    <h6>Хочу к вам</h6>
-                  </a>
-
-
-    <lottie-player src="https://lottie.host/9c20c2a1-52ef-49c8-956a-c1ea918011fc/uFBTqBYqPX.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
                 </div>
               </div>
-  </div>
-  <br>
-  <div id="8_page" class="container" style="height:100vh">
-        <div class="row">
-            <div class="col-3 image_last">
-              <%= image_tag "last_page_couch.png"%>
-            </div>
-            <div class="col-9">
-              <h1><strong> С дивана на треню</strong></h1>
-              <h1><strong> С трени на диван</strong></h1>
-                  <div style="display:flex">
-                    <i class="fa-brands fa-instagram" style="font-size:40px; color:#00FF19; padding-right: 30px"></i>
-                    <i class="fa-brands fa-facebook-f"style="font-size:40px; color:#00FF19"></i>
+              <div class="card davay_chestno" style="width: 350px;">
+                <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
+                <div class="card-body">
+                  <h5 class="card-title">Можно дома. И не только</h5>
+                  <p class="card-text"style = "line-height: 1.2">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
                   </div>
+                </div>
+                <div class="card davay_chestno" style="width: 350px;">
+                  <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
+                  <div class="card-body">
+                    <h5 class="card-title">Не зашел коуч? Бывает!</h5>
+                    <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div id="7_page" class="container" style="height:80vh">
+                <div class="text-center page-content">
+                  <div class="page-text">
+                    <h1 style="font-weight:800; font-size: 60px; font-style: normal;">Для тренеров и коучей</h1>
+                    <p >Если ты талантливый коуч, любишь диваны и людей – <br>
+                      оставь свои контакты, мы тебе напишем. </p>
+                    <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
+                    <a href="#" class="btn btn-green">
+                      <h6>Хочу к вам</h6>
+                    </a>
+                    <lottie-player src="https://lottie.host/9c20c2a1-52ef-49c8-956a-c1ea918011fc/uFBTqBYqPX.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div id="8_page" class="container" style="height:100vh">
+                <div class="row">
+                  <div class="col-3 image_last">
+                    <%= image_tag "last_page_couch.png"%>
+                  </div>
+                  <div class="col-9">
+                    <h1><strong> С дивана на треню</strong></h1>
+                    <h1><strong> С трени на диван</strong></h1>
+                    <div style="display:flex">
+                      <i class="fa-brands fa-instagram" style="font-size:40px; color:#00FF19; padding-right: 30px"></i>
+                      <i class="fa-brands fa-facebook-f"style="font-size:40px; color:#00FF19"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-         </div>
-  </div>
+            <script>
+              const header1 = document.getElementById('item-1page');
 
+              header1.addEventListener('click', function() {
+                  const element = document.getElementById("2_page");
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.pageYOffset -
+                      header.offsetHeight -
+                      30;
+                    if (element) {
+                      window.scrollTo({ top: +y, behavior: 'smooth' });
+                    }
+                  })
 
-</div>
+              const header2 = document.getElementById('item-2page');
 
+              header2.addEventListener('click', function() {
+                  const element = document.getElementById("3_page");
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.pageYOffset -
+                      header.offsetHeight -
+                      30;
+                    if (element) {
+                      window.scrollTo({ top: +y, behavior: 'smooth' });
+                    }
+                  })
+              const header3 = document.getElementById('item-3page');
 
-<script>
-          const header1 = document.getElementById('item-1page');
+              header3.addEventListener('click', function() {
+                  const element = document.getElementById("4_page");
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.pageYOffset -
+                      header.offsetHeight -
+                      30;
+                    if (element) {
+                      window.scrollTo({ top: +y, behavior: 'smooth' });
+                    }
+                  })
 
-          header1.addEventListener('click', function() {
-              const element = document.getElementById("2_page");
-                const y =
-                  element.getBoundingClientRect().top +
-                  window.pageYOffset -
-                  header.offsetHeight -
-                  30;
-                if (element) {
-                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                }
-              })
+              const header4 = document.getElementById('item-4page');
 
-          const header2 = document.getElementById('item-2page');
+              header4.addEventListener('click', function() {
+                  const element = document.getElementById("5_page");
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.pageYOffset -
+                      header.offsetHeight -
+                      30;
+                    if (element) {
+                      window.scrollTo({ top: +y, behavior: 'smooth' });
+                    }
+                  })
 
-          header2.addEventListener('click', function() {
-              const element = document.getElementById("3_page");
-                const y =
-                  element.getBoundingClientRect().top +
-                  window.pageYOffset -
-                  header.offsetHeight -
-                  30;
-                if (element) {
-                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                }
-              })
-          const header3 = document.getElementById('item-3page');
+              const header5 = document.getElementById('item-5page');
 
-          header3.addEventListener('click', function() {
-              const element = document.getElementById("4_page");
-                const y =
-                  element.getBoundingClientRect().top +
-                  window.pageYOffset -
-                  header.offsetHeight -
-                  30;
-                if (element) {
-                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                }
-              })
-
-          const header4 = document.getElementById('item-4page');
-
-          header4.addEventListener('click', function() {
-              const element = document.getElementById("5_page");
-                const y =
-                  element.getBoundingClientRect().top +
-                  window.pageYOffset -
-                  header.offsetHeight -
-                  30;
-                if (element) {
-                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                }
-              })
-
-          const header5 = document.getElementById('item-5page');
-
-          header5.addEventListener('click', function() {
-              const element = document.getElementById("7_page");
-                const y =
-                  element.getBoundingClientRect().top +
-                  window.pageYOffset -
-                  header.offsetHeight -
-                  30;
-                if (element) {
-                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                }
-              })
-        </script>
+              header5.addEventListener('click', function() {
+                  const element = document.getElementById("7_page");
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.pageYOffset -
+                      header.offsetHeight -
+                      30;
+                    if (element) {
+                      window.scrollTo({ top: +y, behavior: 'smooth' });
+                    }
+                  })
+            </script>
