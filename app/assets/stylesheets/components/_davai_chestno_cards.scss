@@ -1,0 +1,90 @@
+.page_5_cards {
+  // display: flex;
+  // flex-direction: row;
+  gap: 20px;
+  white-space: nowrap;
+
+
+  animation: infiniteScroll;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  .davay_chestno:hover {
+
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .5s;
+  }
+
+  .card {
+    display: inline-block;
+    border: 0;
+    vertical-align: top;
+    h5 {
+      font-family: "Circamedium";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px;
+    }
+
+
+
+    .card-text {
+      white-space: normal;
+    }
+    img {
+      width: 300px;
+    }
+    .reason-img {
+      width: 300px;
+      height: 369px;
+      background-color: #d9d9d9;
+    }
+  }
+}
+
+
+.page_5_cards:hover {
+  -webkit-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+  -o-animation-play-state:paused;
+  animation-play-state: paused;
+}
+
+
+
+
+@keyframes infiniteScroll {
+  from {transform: translateX(0) }
+  to {transform: translateX(calc(0px - 50% - 10px));}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .page_5_cards::-webkit-scrollbar {
+//   width: 2px;
+// }
+
+// .page_5_cards::-webkit-scrollbar-thumb {
+//   background: #00ff19;
+// }
+
+// .page_5_cards::-webkit-scrollbar-track {
+//   background: white;
+//   border-left: 3px solid transparent;
+//   border-right: 3px solid transparent;
+//   background-clip: padding-box;
+// }

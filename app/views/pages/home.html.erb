@@ -29,7 +29,7 @@
 <div  style="padding-right:140px; padding-left:140px;">
   <div id="1_page" class="container" style="display:flex; justify-content:space-around; height:70vh; padding: 0;align-items:center;">
     <div class="info_text_1 container overflow-hidden" style="padding: 0;">
-      <h1>Персональный фитнес коуч онлайн</h1>
+      <h1>Персональные фитнес коучи онлайн</h1>
       <div class="row">
         <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
         <div class="col-11 page_text_1" style="line-height: 25px"> в удобное для тебя время </div>
@@ -59,10 +59,10 @@
     </div>
   </div>
   <br>
-  <div id="2_page" class="container" style="display:flex; flex-direction: column; height:40vh; align-items: center;">
-    <div class="2_page_text text-center">
-      <h1 style="font-weight: 800; font-size: 65px;">Как это работает?</h1>
-      <p>60 минут драйва с настоящим профи тренером, который проведёт с тобой комплексную тренировку.</p>
+  <div id="2_page" class="container" style="display:flex; flex-direction: column; height:70vh; align-items: center;  justify-content: center;">
+    <div class="2_page_text text-center"  >
+      <h1 style="margin-top: 5%; margin-bottom: 5%;">Как это работает?</h1>
+      <p >60 минут драйва с настоящим профи тренером, который проведёт с тобой комплексную тренировку.</p>
       <p>Пс-с. Да, если не зайдет – можно просто отключить интернет.  </p>
     </div>
     <div class="page_2_graph">
@@ -95,7 +95,7 @@
   <br>
   <div id="3_page" class="container" style="height:80vh">
     <div data-controller="coach">
-      <h1 style="font-weight: 800; text-align:center; font-size: 65px; ">Наши коучи</h1>
+      <h1 style="text-align:center; ">Наши коучи</h1>
       <div>
         <ul class="nav">
           <li class="nav-item">
@@ -236,85 +236,148 @@
     </div>
   </div>
   <br>
-  <div id="5_page" class="container" style="height:80vh">
-    <h1 class="text-center pb-4" style="font-size: 65px;">Зачем это мне?</h1>
+  <div id="5_page" class="container" style="height:70vh; overflow: hidden;">
+    <h1 class="text-center pb-4" style="margin-bottom: 3%; margin-top: 1%">Зачем это мне?</h1>
     <div class="page_5_cards">
-      <div class="card davay_chestno" style="width: 350px;">
-        <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
-        <div class="card-body">
-          <h5 class="card-title">Давай честно</h5>
-          <p class="card-text" style = "line-height: 1.2">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
-          </div>
-        </div>
-        <div class="card davay_chestno" style="width: 350px">
-          <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
-          <div class="card-body">
-            <h5 class="card-title">Безопасность и польза</h5>
-            <p class="card-text"style = "line-height: 1.2">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
-            </div>
-          </div>
           <div class="card davay_chestno" style="width: 350px;">
-            <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
+            <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
             <div class="card-body">
-              <h5 class="card-title">Всегда под рукой</h5>
-              <p class="card-text"style = "line-height: 1.2">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
+              <h5 class="card-title">Давай честно</h5>
+              <p class="card-text" style = "line-height: 1.2">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
               </div>
-            </div>
-            <div class="card davay_chestno" style="width: 350px;">
-              <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px">
+              <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
               <div class="card-body">
-                <h5 class="card-title">Нужен только он</h5>
-                <p class="card-text"style = "line-height: 1.2">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
-                </div>
+                <h5 class="card-title">Безопасность и польза</h5>
+                <p class="card-text"style = "line-height: 1.2">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
               </div>
-              <div class="card davay_chestno" style="width: 350px;">
-                <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+                <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
                 <div class="card-body">
-                  <h5 class="card-title">Можно дома. И не только</h5>
-                  <p class="card-text"style = "line-height: 1.2">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
-                  </div>
+                  <h5 class="card-title">Всегда под рукой</h5>
+                  <p class="card-text"style = "line-height: 1.2">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
                 </div>
-                <div class="card davay_chestno" style="width: 350px;">
-                  <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+                  <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
                   <div class="card-body">
-                    <h5 class="card-title">Не зашел коуч? Бывает!</h5>
-                    <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
-                    </div>
+                    <h5 class="card-title">Нужен только он</h5>
+                    <p class="card-text"style = "line-height: 1.2">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
                   </div>
-                </div>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+                    <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
+                    <div class="card-body">
+                      <h5 class="card-title">Можно дома. И не только</h5>
+                      <p class="card-text"style = "line-height: 1.2">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
+                    </div>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+                      <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
+                      <div class="card-body">
+                        <h5 class="card-title">Не зашел коуч? Бывает!</h5>
+                        <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
+                      </div>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+            <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
+            <div class="card-body">
+              <h5 class="card-title">Давай честно</h5>
+              <p class="card-text" style = "line-height: 1.2">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
               </div>
-              <br>
-              <div id="7_page" class="container" style="height:80vh">
-                <div class="text-center page-content">
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px">
+              <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
+              <div class="card-body">
+                <h5 class="card-title">Безопасность и польза</h5>
+                <p class="card-text"style = "line-height: 1.2">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
+              </div>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+                <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
+                <div class="card-body">
+                  <h5 class="card-title">Всегда под рукой</h5>
+                  <p class="card-text"style = "line-height: 1.2">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
+                </div>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+                  <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
+                  <div class="card-body">
+                    <h5 class="card-title">Нужен только он</h5>
+                    <p class="card-text"style = "line-height: 1.2">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
+                  </div>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+                    <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
+                    <div class="card-body">
+                      <h5 class="card-title">Можно дома. И не только</h5>
+                      <p class="card-text"style = "line-height: 1.2">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
+                    </div>
+          </div>
+
+          <div class="card davay_chestno" style="width: 350px;">
+                      <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
+                      <div class="card-body">
+                        <h5 class="card-title">Не зашел коуч? Бывает!</h5>
+                        <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
+                      </div>
+          </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div id="7_page" class="container" style="height:80vh">
+        <div class="text-center page-content">
                   <div class="page-text">
-                    <h1 style="font-weight:800; font-size: 60px; font-style: normal;">Для тренеров и коучей</h1>
+                    <h1 >Для тренеров и коучей</h1>
                     <p >Если ты талантливый коуч, любишь диваны и людей – <br>
                       оставь свои контакты, мы тебе напишем. </p>
                     <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
                     <a href="#" class="btn btn-green">
                       <h6>Хочу к вам</h6>
                     </a>
-                    <lottie-player src="https://lottie.host/9c20c2a1-52ef-49c8-956a-c1ea918011fc/uFBTqBYqPX.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
                   </div>
-                </div>
-              </div>
-              <br>
-              <div id="8_page" class="container" style="height:100vh">
-                <div class="row">
+        </div>
+  </div>
+
+   <br>
+
+   <div id="8_page" class="container" style="height:100vh">
+      <div class="row">
                   <div class="col-3 image_last">
                     <%= image_tag "last_page_couch.png"%>
                   </div>
-                  <div class="col-9">
+
+        <div class="col-9">
                     <h1><strong> С дивана на треню</strong></h1>
                     <h1><strong> С трени на диван</strong></h1>
                     <div style="display:flex">
                       <i class="fa-brands fa-instagram" style="font-size:40px; color:#00FF19; padding-right: 30px"></i>
                       <i class="fa-brands fa-facebook-f"style="font-size:40px; color:#00FF19"></i>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+
+   </div>
+</div>
+
+
+
+
+
             <script>
               const header1 = document.getElementById('item-1page');
 

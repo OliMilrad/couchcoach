@@ -9,7 +9,7 @@
   z-index: 1;
 
   .menu {
-    margin-top: 4%;
+    margin-top: 3%;
   }
 
   .header-items {
@@ -46,7 +46,7 @@
 
 // PAGE 1
 h1 {
-font-size: 60px;
+font-size: 55px;
 line-height: 55px;
 margin-bottom: 15px;
 }
@@ -77,6 +77,8 @@ margin-bottom: 15px;
   justify-content: center;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 7%;
+  margin-bottom: 10%;
 
   .graph {
     display: flex;
@@ -148,31 +150,7 @@ margin-bottom: 15px;
 
 // PAGE 5
 
-.page_5_cards {
-  // display: flex;
-  // flex-direction: row;
-  gap: 20px;
-  overflow-x: scroll;
-  white-space: nowrap;
 
-  .card {
-    display: inline-block;
-    border: 0;
-    vertical-align: top;
-
-    .card-text {
-      white-space: normal;
-    }
-    img {
-      width: 300px;
-    }
-    .reason-img {
-      width: 300px;
-      height: 369px;
-      background-color: #d9d9d9;
-    }
-  }
-}
 
 // PAGE 7
 .page-content {
@@ -228,20 +206,7 @@ margin-bottom: 15px;
   background-clip: content-box;
 }
 
-.page_5_cards::-webkit-scrollbar {
-  width: 2px;
-}
 
-.page_5_cards::-webkit-scrollbar-thumb {
-  background: #00ff19;
-}
-
-.page_5_cards::-webkit-scrollbar-track {
-  background: white;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  background-clip: padding-box;
-}
 
 .image_last {
   img {
