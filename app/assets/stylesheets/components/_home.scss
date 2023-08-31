@@ -19,8 +19,19 @@
     line-height: 2%;
     padding: 0;
     margin: 0;
+    ul {
+      margin: 0;
+      padding: 0;
+      p {
+      font-size: 18px;
+      font-weight: 400;
+      font-family: "CircaLight";
+      font-style: normal;
+
+      }
+    }
     :hover {
-      background-color: #00ff19;
+
       cursor: pointer;
     }
   }
@@ -34,6 +45,11 @@
 // }
 
 // PAGE 1
+h1 {
+font-size: 60px;
+line-height: 55px;
+margin-bottom: 15px;
+}
 
 .page_text_1 {
   font-size: 20px;
@@ -197,6 +213,7 @@
 .page_3_cards::-webkit-scrollbar-thumb {
   background: #00ff19;
   border: 1px solid #00ff19;
+  border-radius: 6px;
 }
 
 // .page_3_cards::-webkit-resizer {
