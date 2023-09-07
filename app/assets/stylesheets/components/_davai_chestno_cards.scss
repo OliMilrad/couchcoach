@@ -10,12 +10,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
-  .davay_chestno:hover {
 
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: all .5s;
-  }
 
   .card {
     display: inline-block;
@@ -53,8 +48,12 @@
   animation-play-state: paused;
 }
 
+.davay_chestno:hover {
 
-
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all .5s;
+}
 
 @keyframes infiniteScroll {
   from {transform: translateX(0) }

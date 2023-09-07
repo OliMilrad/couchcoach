@@ -1,11 +1,54 @@
 .card-price {
-  background-color: #EFEFEF;
-  width: 22%;
-  height: 400px;
+  background-color: #efefef;
+  width: 250px;
+  height: 420px;
 
   border-radius: 6px;
   text-align: center;
+
   padding: 20px;
+
+  .discount-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .discount-badge {
+      border-radius: 7px;
+      border: 1px solid #000;
+      width: 102px;
+      height: 41px;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      font-family: "Circamedium";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .full_price {
+    text-align: center;
+    font-family: "Circamedium";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .free-card {
+    height: 100%;
+    position: relative;
+
+    .btn-free {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
 
   .card-title {
     font-size: 46px;
@@ -16,6 +59,11 @@
   }
   .btn-light {
     border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-family: "Circamedium";
   }
   .train-length-wrapper {
     display: flex;
@@ -43,7 +91,6 @@
     }
     .train-length-item-active {
       @extend .train-length-item;
-
     }
   }
 }
@@ -58,4 +105,13 @@
       background-color: #fff;
     }
   }
+}
+.btn-coach-wrapper {
+  background-color: red;
+  height: 100%;
+}
+
+.btn-coach:hover {
+  background-color: #000;
+  color: white;
 }
