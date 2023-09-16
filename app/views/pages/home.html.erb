@@ -26,10 +26,10 @@
   </div>
 </div>
 <br>
-<div  style="padding-right:140px; padding-left:140px;">
-  <div id="1_page" class="container" style="display:flex; justify-content:space-around; height:70vh; padding: 0;align-items:center;">
-    <div class="info_text_1 container overflow-hidden" style="padding: 0;">
-      <h1>Персональные фитнес&nbspкоучи<br>
+<div class= "main_container">
+  <div id="1_page" class="container page_1">
+    <div class="info_text_1 container">
+      <h1>Персональные фитнес-коучи<br>
         онлайн</h1>
       <div class="row">
         <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
@@ -51,18 +51,18 @@
       </div>
       <div class="row">
         <div class="col-1"> <%= image_tag "arrow_1.svg"%> </div>
-        <div class="col-11 page_text_1" style="font-weight: 700; font-size: 20px; font-family:Circamedium; line-height: 25px">первое занятие – бесплатно</div>
+        <div class="col-11 page_text_1_bold">первое занятие – бесплатно</div>
       </div>
-      <button type="button" class="btn btn-green btn-firstpage" style="font-family:Circamedium; font-weight: 800; font-size: 18px">Го на спорт!</button>
+      <button type="button" class="btn btn-green btn-firstpage">Го на спорт!</button>
     </div>
     <div class="1_page_video">
       <%= image_tag "video_place.png", width: 700, height:500 %>
     </div>
   </div>
   <br>
-  <div id="2_page" class="container" style="display:flex; flex-direction: column; height:70vh; align-items: center;  justify-content: center;">
+  <div id="2_page" class="container page_2">
     <div class="2_page_text text-center"  >
-      <h1 style="margin-top: 5%; margin-bottom: 5%;">Как это работает?</h1>
+      <h1>Как это работает?</h1>
       <p >60 минут драйва с настоящим профи тренером, который проведёт с тобой комплексную тренировку.</p>
       <p>Пс-с. Да, если не зайдет – можно просто отключить интернет.  </p>
     </div>
@@ -94,9 +94,9 @@
     </div>
   </div>
   <br>
-  <div id="3_page" class="container" style="height:80vh">
+  <div id="3_page" class="container page_3">
     <div data-controller="coach">
-      <h1 style="text-align:center; ">Наши коучи</h1>
+      <h1>Наши коучи</h1>
       <div>
         <ul class="nav">
           <li class="nav-item">
@@ -129,7 +129,7 @@
             <div class="image-main"> <%= cl_image_tag @head_coach.photos[0].key, height: 270%></div>
             <div class="image-hover"> <%= cl_image_tag @head_coach.photos[1].key, height: 270%></div>
           </div>
-          <div class="card-body" style="padding-top:20px; padding-bottom:20px">
+          <div class="card-body">
             <h5 class="card-title"> <%= @head_coach.name %> </h5>
           </div>
         </div>
@@ -139,7 +139,7 @@
               <div class="image-main"> <%= cl_image_tag coach.photos[0].key, height: 270%></div>
               <div class="image-hover"> <%= cl_image_tag coach.photos[1].key, height: 270%></div>
             </div>
-            <div class="card-body" style="padding-top:20px">
+            <div class="card-body">
               <h5 class="card-title"> <%= coach.name %> </h5>
             </div>
           </div>
@@ -148,7 +148,7 @@
     </div>
   </div>
   <br>
-  <div id="4_page" class="container" style="height:70vh">
+  <div id="4_page" class="container">
     <div class="page_4_text text-center">
       <h1>Пробное занятие – бесплатно</h1>
       <p>Без предоплаты. Полноценная тренировка длительностью 30 минут с нашим хэд-коучем.</p>
@@ -170,7 +170,11 @@
               <p class="card-text">Занятие - консультация <br>
                 с нашим крутым хэд-коучем</p>
               <div class="btn-coach-wrapper">
-                <a class="btn btn-light w-100 btn-coach btn-free">Хвать!</a>
+                <a
+                  class="btn btn-light w-100 btn-coach btn-free"
+                  data-action="click->price#confirm_purchase"
+                  data-number-of-trainings="1"
+                >Хвать!</a>
               </div>
             </div>
           </div>
@@ -193,7 +197,11 @@
             <div class="discount-wrapper">
               <div class="discount-badge"> Скидка 5%</div>
             </div>
-            <a class="btn btn-light w-100 btn-coach">Купить</a>
+            <a
+              class="btn btn-light w-100 btn-coach"
+              data-action="click->price#confirm_purchase"
+              data-number-of-trainings="4"
+            >Купить</a>
           </div>
         </div>
         <div class="card-price" >
@@ -214,7 +222,11 @@
             <div class="discount-wrapper">
               <div class="discount-badge"> Скидка 9%</div>
             </div>
-            <a class="btn btn-light w-100 btn-coach">Купить</a>
+            <a
+              class="btn btn-light w-100 btn-coach"
+              data-action="click->price#confirm_purchase"
+              data-number-of-trainings="8"
+            >Купить</a>
           </div>
         </div>
         <div class="card-price">
@@ -235,104 +247,108 @@
             <div class="discount-wrapper">
               <div class="discount-badge"> Скидка 15%</div>
             </div>
-            <a class="btn btn-light w-100 btn-coach">Купить</a>
+            <a
+              class="btn btn-light w-100 btn-coach"
+              data-action="click->price#confirm_purchase"
+              data-number-of-trainings="24"
+            >Купить</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <br>
-  <div id="5_page" class="container" style="height:70vh; overflow: hidden;">
-    <h1 class="text-center pb-4" style="margin-bottom: 3%; margin-top: 1%">Зачем это мне?</h1>
+  <div id="5_page" class="container page_5">
+    <h1 class="text-center pb-4">Зачем это мне?</h1>
     <div class="page_5_cards">
-      <div class="card davay_chestno" style="width: 350px;">
+      <div class="card davay_chestno" >
         <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
         <div class="card-body">
           <h5 class="card-title">Давай честно</h5>
-          <p class="card-text" style = "line-height: 1.2">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
+          <p class="card-text" >Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
           </div>
         </div>
-        <div class="card davay_chestno" style="width: 350px">
+        <div class="card davay_chestno">
           <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
           <div class="card-body">
             <h5 class="card-title">Безопасность и польза</h5>
-            <p class="card-text"style = "line-height: 1.2">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
+            <p class="card-text">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
             </div>
           </div>
-          <div class="card davay_chestno" style="width: 350px;">
+          <div class="card davay_chestno">
             <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
             <div class="card-body">
               <h5 class="card-title">Всегда под рукой</h5>
-              <p class="card-text"style = "line-height: 1.2">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
+              <p class="card-text">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
               </div>
             </div>
-            <div class="card davay_chestno" style="width: 350px;">
+            <div class="card davay_chestno">
               <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
               <div class="card-body">
                 <h5 class="card-title">Нужен только он</h5>
-                <p class="card-text"style = "line-height: 1.2">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
+                <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
                 </div>
               </div>
-              <div class="card davay_chestno" style="width: 350px;">
+              <div class="card davay_chestno">
                 <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
                 <div class="card-body">
                   <h5 class="card-title">Можно дома. И не только</h5>
-                  <p class="card-text"style = "line-height: 1.2">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
+                  <p class="card-text">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
                   </div>
                 </div>
-                <div class="card davay_chestno" style="width: 350px;">
+                <div class="card davay_chestno">
                   <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
                   <div class="card-body">
                     <h5 class="card-title">Не зашел коуч? Бывает!</h5>
-                    <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
+                    <p class="card-text">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
                     </div>
                   </div>
-                  <div class="card davay_chestno" style="width: 350px;">
+                  <div class="card davay_chestno">
                     <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
                     <div class="card-body">
                       <h5 class="card-title">Давай честно</h5>
-                      <p class="card-text" style = "line-height: 1.2">Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
+                      <p class="card-text" >Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
                       </div>
                     </div>
-                    <div class="card davay_chestno" style="width: 350px">
+                    <div class="card davay_chestno">
                       <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
                       <div class="card-body">
                         <h5 class="card-title">Безопасность и польза</h5>
-                        <p class="card-text"style = "line-height: 1.2">Вс�� наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
+                        <p class="card-text">Вс�� наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
                         </div>
                       </div>
-                      <div class="card davay_chestno" style="width: 350px;">
+                      <div class="card davay_chestno">
                         <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
                         <div class="card-body">
                           <h5 class="card-title">Всегда под рукой</h5>
-                          <p class="card-text"style = "line-height: 1.2">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
+                          <p class="card-text">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
                           </div>
                         </div>
-                        <div class="card davay_chestno" style="width: 350px;">
+                        <div class="card davay_chestno">
                           <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
                           <div class="card-body">
                             <h5 class="card-title">Нужен только он</h5>
-                            <p class="card-text"style = "line-height: 1.2">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
+                            <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
                             </div>
                           </div>
-                          <div class="card davay_chestno" style="width: 350px;">
+                          <div class="card davay_chestno">
                             <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
                             <div class="card-body">
                               <h5 class="card-title">Можно дома. И не только</h5>
-                              <p class="card-text"style = "line-height: 1.2">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
+                              <p class="card-text">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
                               </div>
                             </div>
-                            <div class="card davay_chestno" style="width: 350px;">
+                            <div class="card davay_chestno">
                               <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
                               <div class="card-body">
                                 <h5 class="card-title">Не зашел коуч? Бывает!</h5>
-                                <p class="card-text"style = "line-height: 1.2">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
+                                <p class="card-text">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
                                 </div>
                               </div>
                             </div>
                           </div>
                           <br>
-                          <div id="7_page" class="container" style="height:80vh">
+                          <div id="7_page" class="container" >
                             <div class="text-center page-content">
                               <div class="page-text">
                                 <h1 >Для тренеров и коучей</h1>
@@ -346,7 +362,7 @@
                             </div>
                           </div>
                           <br>
-                          <div id="8_page" class="container" style="height:100vh">
+                          <div id="8_page" class="container" >
                             <div class="row">
                               <div class="col-3 image_last">
                                 <%= image_tag "last_page_couch.png"%>
