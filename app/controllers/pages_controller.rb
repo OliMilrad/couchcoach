@@ -4,5 +4,6 @@ class PagesController < ApplicationController
   def home
     @head_coach = Coach.find_by(name: "Алёна")
     @coaches = Coach.all.without(@head_coach)
+   
   end
 end

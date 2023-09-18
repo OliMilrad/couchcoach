@@ -56,7 +56,14 @@
       <button type="button" class="btn btn-green btn-firstpage">Го на спорт!</button>
     </div>
     <div class="page_1_video">
-      <%= image_tag "video_place.png", width: 700, height:500 %>
+      <%= cl_video_tag("couch_coach_ver3_rhqfhk.mp4",
+        :loop => true, :controls => true,
+        :resource_type => "video",
+        :transformation => [
+          :height=>360, :width=>480, :crop=>"pad",
+          :quality=>70,],
+        :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+
     </div>
   </div>
   <br>
@@ -243,7 +250,7 @@
             </div>
             <h5 class="card-title" data-price-target="twfour_card_price_to_change">1040 ₽</h5>
             <p class="card-text"> за 1 тренировку</p>
-            <p class="full_price"> <span style="text-decoration:line-through; text-decoration-thickness:1px" id = "span_twfour_no">31200</span><span id = "span_twfour_yes">/24960 ₽</span></p>
+            <p class="full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_twfour_no">31200</span><span id = "span_twfour_yes" style="color:black; ">  / 24960 ₽</span></p>
             <div class="discount-wrapper">
               <div class="discount-badge"> Скидка 15%</div>
             </div>
