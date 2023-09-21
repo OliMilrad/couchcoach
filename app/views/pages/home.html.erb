@@ -210,7 +210,7 @@
             </div>
             <h5 class="card-title" data-price-target="four_card_price_to_change">1235 ₽</h5>
             <p class="card-text"> за 1 тренировку</p>
-            <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:1px" id = "span_four_no">5200</span><span id = "span_four_yes">/4940 ₽</span></p>
+            <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_four_no">5200</span><span id = "span_four_yes" style="color:black;"> / 4940 ₽</span></p>
             <div class="discount-wrapper">
               <div class="discount-badge"> Скидка 5%</div>
             </div>
@@ -235,7 +235,7 @@
             </div>
             <h5 class="card-title" data-price-target="eight_card_price_to_change">1183 ₽</h5>
             <p class="card-text"> за 1 тренировку</p>
-            <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:1px" id = "span_eight_no">10400</span><span id = "span_eight_yes">/9464 ₽</span></p>
+            <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_eight_no">10400</span><span id = "span_eight_yes" style="color:black;"> / 9464 ₽</span></p>
             <div class="discount-wrapper">
               <div class="discount-badge"> Скидка 9%</div>
             </div>
@@ -260,7 +260,7 @@
             </div>
             <h5 class="card-title" data-price-target="twfour_card_price_to_change">1040 ₽</h5>
             <p class="card-text"> за 1 тренировку</p>
-            <p class="full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_twfour_no">31200</span><span id = "span_twfour_yes" style="color:black; ">  / 24960 ₽</span></p>
+            <p class="full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_twfour_no">31200</span><span id = "span_twfour_yes" style="color:black;">  / 24960 ₽</span></p>
             <div class="discount-wrapper">
               <div class="discount-badge"> Скидка 15%</div>
             </div>
@@ -319,7 +319,7 @@
                   </div>
                   <h5 class="card-title" data-price-target="four_card_price_to_change">1235 ₽</h5>
                   <p class="card-text"> за 1 тренировку</p>
-                  <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:1px" id = "span_four_no">5200</span><span id = "span_four_yes">/4940 ₽</span></p>
+                  <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_four_no">5200</span><span id = "span_four_yes" style="color:black;"> / 4940 ₽</span></p>
                   <div class="discount-wrapper">
                     <div class="discount-badge"> Скидка 5%</div>
                   </div>
@@ -346,7 +346,7 @@
                   </div>
                   <h5 class="card-title" data-price-target="eight_card_price_to_change">1183 ₽</h5>
                   <p class="card-text"> за 1 тренировку</p>
-                  <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:1px" id = "span_eight_no">10400</span><span id = "span_eight_yes">/9464 ₽</span></p>
+                  <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_eight_no">10400</span><span id = "span_eight_yes" style="color:black;"> / 9464 ₽</span></p>
                   <div class="discount-wrapper">
                     <div class="discount-badge"> Скидка 9%</div>
                   </div>
@@ -386,11 +386,10 @@
               </div>
            </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </div>
-
-
   <br>
   <div id="5_page" class="container page_5">
     <h1 class="text-center pb-4">Зачем это мне?</h1>
@@ -480,9 +479,73 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <br>
-                          <div id="7_page" class="container" >
+  </div>
+
+  <div id="5_page" class="container page_5_mobile">
+    <h1 class="text-center pb-4">Зачем это мне?</h1>
+    <div data-controller="carousel" class="swiper-container">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide">
+         <div class="card davay_chestno" >
+          <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
+          <div class="card-body">
+          <h5 class="card-title">Давай честно</h5>
+          <p class="card-text" >Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
+          </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+        <div class="card davay_chestno">
+          <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
+          <div class="card-body">
+            <h5 class="card-title">Безопасность и польза</h5>
+            <p class="card-text">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
+            </div>
+        </div>
+        </div>
+          <div class="swiper-slide">
+          <div class="card davay_chestno">
+            <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
+            <div class="card-body">
+              <h5 class="card-title">Всегда под рукой</h5>
+              <p class="card-text">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
+              </div>
+          </div>
+          </div>
+            <div class="swiper-slide">
+            <div class="card davay_chestno">
+              <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
+              <div class="card-body">
+                <h5 class="card-title">Нужен только он</h5>
+                <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
+                </div>
+            </div>
+            </div>
+              <div class="swiper-slide">
+              <div class="card davay_chestno">
+                <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
+                <div class="card-body">
+                  <h5 class="card-title">Можно дома. И не только</h5>
+                  <p class="card-text">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
+                  </div>
+              </div>
+              </div>
+              <div class="swiper-slide">
+              <div class="card davay_chestno">
+                              <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
+                              <div class="card-body">
+                                <h5 class="card-title">Не зашел коуч? Бывает!</h5>
+                                <p class="card-text">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
+                                </div>
+              </div>
+              </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div id="7_page" class="container" >
                             <div class="text-center page-content">
                               <div class="page-text">
                                 <h1 >Для тренеров и коучей</h1>
@@ -494,7 +557,7 @@
                                 </a>
                               </div>
                             </div>
-                          </div>
+   </div>
                           <br>
                           <div id="8_page" class="container" >
                             <div class="row">
@@ -507,12 +570,13 @@
                                 <div style="display:flex">
                                   <i class="fa-brands fa-instagram" style="font-size:40px; color:#00FF19; padding-right: 30px"></i>
                                   <i class="fa-brands fa-facebook-f"style="font-size:40px; color:#00FF19"></i>
-                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <script>
+  </div>
+
+</div>
+<script>
                           const header1 = document.getElementById('item-1page');
 
                           header1.addEventListener('click', function() {
