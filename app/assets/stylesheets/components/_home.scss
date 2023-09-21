@@ -161,7 +161,7 @@ h1 {
     display: flex;
     align-items: center;
   }
-  
+
   .arrow_small {
     display: none;
   }
@@ -201,6 +201,16 @@ h1 {
 }
 
 // PAGE 4
+
+.page_4_mobile {
+  display: none;
+}
+
+.page_4_desktop{
+  display: block;
+}
+
+
 .page_4_cards {
   margin-top: 40px;
   display: flex;

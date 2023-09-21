@@ -165,7 +165,7 @@
     </div>
   </div>
   <br>
-  <div id="4_page" class="container">
+  <div id="4_page" class="container page_4_desktop">
     <div class="page_4_text text-center">
       <h1>Пробное занятие – бесплатно</h1>
       <p>Без предоплаты. Полноценная тренировка длительностью 30 минут с нашим хэд-коучем.</p>
@@ -274,6 +274,123 @@
       </div>
     </div>
   </div>
+  <div id="4_page_mobile" class="container page_4_mobile">
+    <div data-controller="price">
+      <div data-controller="carousel" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-price">
+                <div class="card-body free-card">
+                  <div class="free-details">
+                    <p class="card-text">Первая тренировка</p>
+                    <p class="card-text">Время (мин)</p>
+                    <div class="train-length-wrapper">
+                      <div class="train-length-item-active">
+                        <h5>30</h5>
+                      </div>
+                    </div>
+                    <h5 class="card-title">0 ₽</h5>
+                    <p class="card-text"> Первая тренировка</p>
+                    <p class="card-text">Занятие - консультация <br>
+                      с нашим крутым хэд-коучем</p>
+                    <div class="btn-coach-wrapper">
+                      <a
+                        class="btn btn-light w-100 btn-coach btn-free"
+                        data-action="click->price#confirm_purchase"
+                        data-number-of-trainings="1"
+                      >Хвать!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <div class="swiper-slide">
+              <div class="card-price">
+                <div class="card-body">
+                  <p class="card-text">4 тренировки</p>
+                  <p class="card-text">Время (мин)</p>
+                  <div class="train-length-wrapper">
+                    <div class="train-length-item" data-price-target="four_card_half_time_to_change">
+                      <h5 data-action="click->price#changetime_four">30</h5>
+                    </div>
+                    <div class="train-length-item-active" data-price-target="four_card_full_time_to_change">
+                      <h5 data-action="click->price#changetime_four">60</h5>
+                    </div>
+                  </div>
+                  <h5 class="card-title" data-price-target="four_card_price_to_change">1235 ₽</h5>
+                  <p class="card-text"> за 1 тренировку</p>
+                  <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:1px" id = "span_four_no">5200</span><span id = "span_four_yes">/4940 ₽</span></p>
+                  <div class="discount-wrapper">
+                    <div class="discount-badge"> Скидка 5%</div>
+                  </div>
+                  <a
+                    class="btn btn-light w-100 btn-coach"
+                    data-action="click->price#confirm_purchase"
+                    data-number-of-trainings="4"
+                  >Купить</a>
+                </div>
+              </div>
+           </div>
+           <div class="swiper-slide">
+              <div class="card-price" >
+                <div class="card-body">
+                  <p class="card-text">8 тренировок</p>
+                  <p class="card-text">Время (мин)</p>
+                  <div class="train-length-wrapper">
+                    <div class="train-length-item" data-price-target="eight_card_half_time_to_change">
+                      <h5 data-action="click->price#changetime_eight">30</h5>
+                    </div>
+                    <div class="train-length-item-active" data-price-target="eight_card_full_time_to_change">
+                      <h5 data-action="click->price#changetime_eight">60</h5>
+                    </div>
+                  </div>
+                  <h5 class="card-title" data-price-target="eight_card_price_to_change">1183 ₽</h5>
+                  <p class="card-text"> за 1 тренировку</p>
+                  <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:1px" id = "span_eight_no">10400</span><span id = "span_eight_yes">/9464 ₽</span></p>
+                  <div class="discount-wrapper">
+                    <div class="discount-badge"> Скидка 9%</div>
+                  </div>
+                  <a
+                    class="btn btn-light w-100 btn-coach"
+                    data-action="click->price#confirm_purchase"
+                    data-number-of-trainings="8"
+                  >Купить</a>
+                </div>
+              </div>
+           </div>
+           <div class="swiper-slide">
+              <div class="card-price">
+                <div class="card-body">
+                  <p class="card-text">24 тренировки</p>
+                  <p class="card-text">Время (мин)</p>
+                  <div class="train-length-wrapper">
+                    <div class="train-length-item" data-price-target="twfour_card_half_time_to_change">
+                      <h5 data-action="click->price#changetime_twfour">30</h5>
+                    </div>
+                    <div class="train-length-item-active" data-price-target="twfour_card_full_time_to_change">
+                      <h5 data-action="click->price#changetime_twfour">60</h5>
+                    </div>
+                  </div>
+                  <h5 class="card-title" data-price-target="twfour_card_price_to_change">1040 ₽</h5>
+                  <p class="card-text"> за 1 тренировку</p>
+                  <p class="full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_twfour_no">31200</span><span id = "span_twfour_yes" style="color:black; ">  / 24960 ₽</span></p>
+                  <div class="discount-wrapper">
+                    <div class="discount-badge"> Скидка 15%</div>
+                  </div>
+                  <a
+                    class="btn btn-light w-100 btn-coach"
+                    data-action="click->price#confirm_purchase"
+                    data-number-of-trainings="24"
+                  >Купить</a>
+                </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <br>
   <div id="5_page" class="container page_5">
     <h1 class="text-center pb-4">Зачем это мне?</h1>

@@ -5,7 +5,7 @@
     display: none;
   }
   .header {
-    width: 600px;
+    width: 100%;
     padding-right: 0;
     padding-left: 0;
   }
@@ -70,12 +70,18 @@
 
 //PAGE_4
 
-.page_4_cards {
-  margin-top: 40px;
-  display: flex;
-    flex-wrap: wrap;
-  justify-content: space-between;
-  overflow-x: scroll;
+.page_4_desktop {
+  display: none;
+}
+
+.page_4_mobile {
+  display: block;
+  width: 290px;
+}
+
+
+.page_4_text {
+  display: none;
 }
 
 }

@@ -1,4 +1,4 @@
-const path    = require("path")
+const path = require("path")
 const webpack = require("webpack")
 
 module.exports = {
@@ -11,6 +11,18 @@ module.exports = {
     filename: "[name].js",
     sourceMapFilename: "[file].map",
     path: path.resolve(__dirname, "app/assets/builds"),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(sa|sc|c)ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader"
+        ]
+      }
+    ]
   },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({
