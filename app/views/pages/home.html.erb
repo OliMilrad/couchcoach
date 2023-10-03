@@ -56,13 +56,46 @@
       <button type="button" class="btn btn-green btn-firstpage">Го на спорт!</button>
     </div>
     <div class="page_1_video">
-      <%= cl_video_tag("couch_coach_ver3_rhqfhk.mp4",
+      <%= cl_video_tag("couch_coach_main_compressed_qqkzex.mp4",
         :loop => true, :controls => true,
         :resource_type => "video",
         :transformation => [
           :width=>730, :crop=>"pad", :background=>"white"
           ],
         :fallback_content => "Your browser does not support HTML5 video tags." ) %>
+
+    </div>
+  </div>
+  <div id="1_page" class="container page_1_mobile">
+    <div class="info_text_1 container">
+      <h1>Персональные фитнес-коучи<br>
+        онлайн</h1>
+      <div class="row">
+        <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="line-height: 25px"> в удобное для тебя время </div>
+      </div>
+      <div class="row">
+        <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="line-height: 25px"> не за бешеные бабки </div>
+      </div>
+      <div class="row">
+        <div class="col-1" style="line-height: 20px"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="line-height: 20px">  не надо ехать на треню в метро <br>
+          (и даже трамвае)</div>
+      </div>
+      <div class="row">
+        <div class="col-1" style="line-height: 20px"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1" style="line-height: 20px">  напрягаться надо<br>
+          (но немного и в удовольствие)</div>
+      </div>
+      <div class="row">
+        <div class="col-1"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-11 page_text_1_bold">первое занятие – бесплатно</div>
+      </div>
+      <button type="button" class="btn btn-green btn-firstpage">Го на спорт!</button>
+    </div>
+    <div class="page_1_photo">
+    <%= image_tag "main_photo_mobile.jpg"%>
 
     </div>
   </div>
@@ -173,7 +206,7 @@
     <div data-controller="price">
       <div class="page_4_cards">
         <div class="card-price">
-          <div class="card-body free-card">
+          <div class="free-card">
             <div class="free-details">
               <p class="card-text">Первая тренировка</p>
               <p class="card-text">Время (мин)</p>
@@ -184,20 +217,18 @@
               </div>
               <h5 class="card-title">0 ₽</h5>
               <p class="card-text"> Первая тренировка</p>
-              <p class="card-text">Занятие - консультация <br>
+              <p class="card-text free-card-text">Занятие - консультация <br>
                 с нашим крутым хэд-коучем</p>
-              <div class="btn-coach-wrapper">
                 <a
                   class="btn btn-light w-100 btn-coach btn-free"
                   data-action="click->price#confirm_purchase"
                   data-number-of-trainings="1"
                 >Хвать!</a>
-              </div>
             </div>
           </div>
         </div>
         <div class="card-price">
-          <div class="card-body">
+          <div class="free-card">
             <p class="card-text">4 тренировки</p>
             <p class="card-text">Время (мин)</p>
             <div class="train-length-wrapper">
@@ -545,7 +576,7 @@
 
   <br>
 
-  <div id="7_page" class="container" >
+  <div id="7_page" class="container page_7" >
                             <div class="text-center page-content">
                               <div class="page-text">
                                 <h1 >Для тренеров и коучей</h1>

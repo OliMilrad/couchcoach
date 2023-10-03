@@ -14,10 +14,13 @@
     padding-left: 16px;
   }
 //1_PAGE
-  .page_1_video {
-    display: none;
-
-  }
+.page_1 {
+  display: none;
+}
+.page_1_mobile {
+  display: block;
+  width: 380px;
+}
 
 //2_PAGE
 .page_2_graph {
@@ -101,7 +104,7 @@
 //PAGE 5
 .page_5_mobile {
   display: block;
-  width: 400px;
+  width: 380px;
   overflow-y: hidden;
 }
 .page_5 {

@@ -56,6 +56,11 @@ h1 {
 
 // PAGE 1
 
+
+.page_1_mobile {
+  display: none;
+}
+
 .page_1 {
   display:flex;
   justify-content:space-around;
@@ -237,7 +242,9 @@ margin-bottom: 70px;
 }
 
 // PAGE 7
-.page-content {
+.page_7 {
+  margin-bottom: 70px;
+  .page-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -264,7 +271,9 @@ margin-bottom: 70px;
         margin: 0;
       }
     }
+   }
   }
+
 }
 
 .page_3_cards::-webkit-scrollbar {
