@@ -1,6 +1,10 @@
 @media only screen and (max-width: 600px) {
 //header
-
+.logo {
+  img {
+  width: 120px;
+  }
+}
   .menu {
     display: none;
   }
@@ -18,11 +22,46 @@
   display: none;
 }
 .page_1_mobile {
-  display: block;
-  width: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+
+  .page_text_1 {
+  font-size: 18px;
+  padding-left: 5px;
+  }
+  .page_text_1_bold{
+    padding-left: 5px;
+  }
+  .btn-firstpage {
+    margin-left: 30px;
+    width: 240px;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 800;
+
+  }
 }
 
 //2_PAGE
+.page_2 {
+  width: 280px;
+
+  .arrow_small {
+    margin-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    img {
+      height: 15px;
+
+    }
+  }
+
+}
 .page_2_graph {
   display: flex;
   justify-content: center;
@@ -36,10 +75,16 @@
     flex-direction: row;
     align-items: center;
     text-align: center;
-    // width: 140px;
+    width: 280px;
+    height: 50px;
+
+
 
     p {
-      padding-top: 10px;
+      padding-top: 15px;
+      padding-left: 15px;
+      font-size: 16px;
+      text-align: left;
     }
     .circle-green {
       width: 48px;
@@ -49,6 +94,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+
 
       h2 {
         margin: 0;
@@ -111,5 +158,18 @@
   display: none;
 }
 
+//PAGE 7
+
+.page_7 {
+  p {
+    font-size: 16px;
+    width: 100% !important;
+  }
+
+}
+
+h1{
+  font-size: 32px;
+}
 
 }
