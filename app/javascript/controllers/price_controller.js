@@ -9,6 +9,8 @@ export default class extends Controller {
   chosen_price_eight = 9464;
   chosen_price_twfour = 24960;
 
+
+
   // initialize() {
   //   this.showCurrentСard_to_click()
   // }
@@ -32,11 +34,16 @@ export default class extends Controller {
   }
 
   changetime_four(time_to_change) {
+    console.log(span_four_no)
+    console.log(span_four_yes)
 
     if (time_to_change.target.innerText =="60") {
+
       this.four_card_price_to_changeTarget.innerText = "1235 ₽"
-      span_four_no.textContent = "5200"
-      span_four_yes.textContent = "/4940 ₽"
+      span_four_no.textContent = "5200 "
+      span_four_yes.textContent = " / 4940 ₽"
+      span_four_no_m.textContent = "5200 "
+      span_four_yes_m.textContent = " / 4940 ₽"
 
       this.four_card_half_time_to_changeTarget.classList.add("train-length-item")
       this.four_card_full_time_to_changeTarget.classList.add("train-length-item-active")
@@ -48,8 +55,10 @@ export default class extends Controller {
     }
     else  {
       this.four_card_price_to_changeTarget.innerText = "757 ₽"
-      span_four_no.textContent = "3120"
-      span_four_yes.textContent = "/3027 ₽"
+      span_four_no.textContent = "3120 "
+      span_four_yes.textContent = " / 3027 ₽"
+      span_four_no_m.textContent = "3120 "
+      span_four_yes_m.textContent = " / 3027 ₽"
 
       this.four_card_full_time_to_changeTarget.classList.add("train-length-item")
       this.four_card_half_time_to_changeTarget.classList.add("train-length-item-active")
@@ -65,8 +74,10 @@ export default class extends Controller {
 
     if (time_to_change.target.innerText =="60") {
       this.eight_card_price_to_changeTarget.innerText = "1183 ₽"
-      span_eight_no.textContent = "10400"
-      span_eight_yes.textContent = "/9464 ₽"
+      span_eight_no.textContent = "10400 "
+      span_eight_yes.textContent = " / 9464 ₽"
+      span_eight_no_m.textContent = "10400 "
+      span_eight_yes_m.textContent = " / 9464 ₽"
 
       this.eight_card_half_time_to_changeTarget.classList.add("train-length-item")
       this.eight_card_full_time_to_changeTarget.classList.add("train-length-item-active")
@@ -78,8 +89,10 @@ export default class extends Controller {
     }
     else  {
       this.eight_card_price_to_changeTarget.innerText = "726 ₽"
-      span_eight_no.textContent = "6240"
-      span_eight_yes.textContent = "/5804 ₽"
+      span_eight_no.textContent = "6240 "
+      span_eight_yes.textContent = " / 5804 ₽"
+      span_eight_no_m.textContent = "6240 "
+      span_eight_yes_m.textContent = " / 5804 ₽"
 
       this.eight_card_full_time_to_changeTarget.classList.add("train-length-item")
       this.eight_card_half_time_to_changeTarget.classList.add("train-length-item-active")
@@ -94,8 +107,10 @@ export default class extends Controller {
 
     if (time_to_change.target.innerText =="60") {
       this.twfour_card_price_to_changeTarget.innerText = "1040 ₽"
-      span_twfour_no.textContent = "31200"
-      span_twfour_yes.textContent = "/24960 ₽"
+      span_twfour_no.textContent = "31200 "
+      span_twfour_yes.textContent = " / 24960 ₽"
+      span_twfour_no_m.textContent = "31200 "
+      span_twfour_yes_m.textContent = " / 24960 ₽"
 
       this.twfour_card_half_time_to_changeTarget.classList.add("train-length-item")
       this.twfour_card_full_time_to_changeTarget.classList.add("train-length-item-active")
@@ -107,8 +122,10 @@ export default class extends Controller {
     }
     else  {
       this.twfour_card_price_to_changeTarget.innerText = "663 ₽"
-      span_twfour_no.textContent = "18720"
-      span_twfour_yes.textContent = "/15912 ₽"
+      span_twfour_no.textContent = "18720 "
+      span_twfour_yes.textContent = " / 15912 ₽"
+      span_twfour_no_m.textContent = "18720 "
+      span_twfour_yes_m.textContent = " / 15912 ₽"
 
       this.twfour_card_full_time_to_changeTarget.classList.add("train-length-item")
       this.twfour_card_half_time_to_changeTarget.classList.add("train-length-item-active")
