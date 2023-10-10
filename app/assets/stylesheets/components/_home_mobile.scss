@@ -1,6 +1,7 @@
 @media only screen and (max-width: 600px) {
 //header
 .logo {
+
   img {
   width: 120px;
   margin-bottom: 20px;
@@ -13,6 +14,7 @@
     width: 100%;
     padding-right: 0;
     padding-left: 0;
+    z-index: 1;
   }
   .main_container {
     padding-right: 16px;
@@ -121,6 +123,8 @@
 
 //PAGE_4
 
+
+
 .page_4_desktop {
   display: none;
 }
@@ -130,6 +134,11 @@
    width: 300px;
   overflow-x: hidden;
   margin-bottom: 70px;
+
+  .swiper-wrapper {
+    position: unset;
+
+  }
 }
 
 // .swiper-pagination-bullet {
@@ -154,6 +163,11 @@
   display: block;
   width: 380px;
   overflow-y: hidden;
+
+  .swiper-wrapper {
+    position: unset;
+
+  }
 }
 .page_5 {
   display: none;
