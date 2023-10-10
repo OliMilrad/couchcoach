@@ -50,7 +50,7 @@
           (но немного и в удовольствие)</div>
       </div>
       <div class="row">
-        <div class="col-1"> <%= image_tag "arrow_1.svg"%> </div>
+        <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
         <div class="col-11 page_text_1_bold">первое занятие – бесплатно</div>
       </div>
       <a href="https://t.me/couch_coach_bot?start" class="btn btn-green btn-firstpage" >Го на спорт!</a>
@@ -107,14 +107,14 @@
       <p>Пс-с. Если не зайдет – можно просто отключить интернет.  </p>
     </div>
     <div class="page_2_graph">
-      <div class="graph 1_el">
+      <div class="graph el_1">
         <div class="circle-green">
           <h2>01</h2>
         </div>
         <p> Подбираем тренера</p>
       </div>
           <div class="arrow">
-          <%= image_tag "arrow.png", width: 350%>
+          <%= image_tag "arrow.png", width: 320%>
           </div>
 
         <div class="arrow_small">
@@ -128,18 +128,18 @@
         <p> Назначаем удобное время</p>
       </div>
           <div class="arrow">
-          <%= image_tag "arrow.png", width: 350%>
+          <%= image_tag "arrow.png", width: 320%>
           </div>
 
           <div class="arrow_small">
             <%=image_tag "arrow_small.svg", width: 350%>
           </div>
 
-      <div class="graph 3_el">
+      <div class="graph el_3">
         <div class="circle-green">
           <h2>03</h2>
         </div>
-        <p> Перед занятием высылаем <br>ссылку на видео-треню</p>
+        <p> Перед занятием<nobr> высылаем <br>ссылку на видео-треню</p>
       </div>
     </div>
   </div>
@@ -149,6 +149,9 @@
       <h1>Наши коучи</h1>
       <div>
         <ul class="nav">
+          <li class="nav-item">
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">all</a>
+          </li>
           <li class="nav-item">
             <a class="btn btn-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">сила</a>
           </li>
@@ -176,6 +179,7 @@
           <li class="nav-item">
             <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">танцы</a>
           </li>
+
         </ul>
       </div>
       <br>
@@ -482,49 +486,7 @@
                     <p class="card-text">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
                     </div>
                   </div>
-                  <div class="card davay_chestno">
-                    <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
-                    <div class="card-body">
-                      <h5 class="card-title">Давай честно</h5>
-                      <p class="card-text" >Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
-                      </div>
-                    </div>
-                    <div class="card davay_chestno">
-                      <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
-                      <div class="card-body">
-                        <h5 class="card-title">Безопасность и польза</h5>
-                        <p class="card-text">Вс�� наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
-                        </div>
-                      </div>
-                      <div class="card davay_chestno">
-                        <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
-                        <div class="card-body">
-                          <h5 class="card-title">Всегда под рукой</h5>
-                          <p class="card-text">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
-                          </div>
-                        </div>
-                        <div class="card davay_chestno">
-                          <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
-                          <div class="card-body">
-                            <h5 class="card-title">Нужен только он</h5>
-                            <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
-                            </div>
-                          </div>
-                          <div class="card davay_chestno">
-                            <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
-                            <div class="card-body">
-                              <h5 class="card-title">Можно дома. И не только</h5>
-                              <p class="card-text">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
-                              </div>
-                            </div>
-                            <div class="card davay_chestno">
-                              <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
-                              <div class="card-body">
-                                <h5 class="card-title">Не зашел коуч? Бывает!</h5>
-                                <p class="card-text">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
-                                </div>
-                              </div>
-                            </div>
+    </div>
   </div>
 
   <div id="5_page" class="container page_5_mobile">
@@ -597,7 +559,7 @@
                                       <h1 >Для тренеров и коучей</h1>
                                       <p >Если ты талантливый коуч, любишь диваны и людей – <br>
                                         оставь свои контакты, мы тебе напишем. </p>
-                                      <p>У нас классные условия и крутые офисы по всему миру! Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
+                                      <p>У нас классные условия и крутые офисы по всему миру! <br>Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
                                       <a href="https://t.me/couch_coach_bot?start" class="btn btn-green">
                                         <h6>Хочу к вам</h6>
                                       </a>

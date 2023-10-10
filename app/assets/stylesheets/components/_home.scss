@@ -131,9 +131,14 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 7%;
   margin-bottom: 10%;
+
+  .el_1 p {
+      padding-top: 10px;
+      width: 220px !important;
+  }
 
   .graph {
     display: flex;
@@ -144,10 +149,12 @@ h1 {
 
     p {
       padding-top: 10px;
+      width: 240px;
     }
     .circle-green {
       width: 48px;
       height: 48px;
+
       background-color: #00ff19;
       border-radius: 24px;
       display: flex;
@@ -158,6 +165,7 @@ h1 {
         margin: 0;
         padding: 0;
         display: flex;
+        font-size: 2rem;
       }
     }
   }
@@ -182,6 +190,10 @@ h1 {
 .nav {
   .nav-item {
     margin: 5px;
+
+    a {
+      font-size: 17px;
+    }
 
     .btn {
       height: 40px;
@@ -258,17 +270,20 @@ margin-bottom: 70px;
     align-items: center;
 
     p {
-      width: 50%;
+      width: 60%;
       text-align: center;
     }
 
     .btn {
-      margin-top: 60px;
+      margin-top: 30px;
       border-radius: 6px;
+      width: 160px;
 
       h6 {
         padding: 0;
         margin: 0;
+        font-weight: 400;
+        font-size: 1.4rem;
       }
     }
    }
@@ -298,6 +313,31 @@ margin-bottom: 70px;
   border: 3px solid transparent;
   background-clip: content-box;
 }
+
+
+.page_5_cards::-webkit-scrollbar {
+  width: 3px;
+  height: 7px;
+}
+
+.page_5_cards::-webkit-scrollbar-thumb {
+  background: #00ff19;
+  border: 1px solid #00ff19;
+  border-radius: 6px;
+}
+
+// .page_3_cards::-webkit-resizer {
+//   background: white;
+//   border-left: 3px solid transparent;
+//   border-right: 3px solid transparent;
+//   background-clip: padding-box;
+// }
+.page_5_cards::-webkit-scrollbar-track {
+  background: #d9d9d9;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
 
 
 

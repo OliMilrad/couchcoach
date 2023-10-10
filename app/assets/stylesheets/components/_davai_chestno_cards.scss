@@ -4,19 +4,23 @@
   gap: 20px;
   white-space: nowrap;
 
+  overflow-x: scroll;
+  overflow-y: hidden;
 
-  animation: infiniteScroll;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  // animation: infiniteScroll;
+  // animation-duration: 20s;
+  // animation-iteration-count: infinite;
+  // animation-timing-function: linear;
 
 
 }
   .davay_chestno {
+
     display: inline-block;
     border: 0;
     vertical-align: top;
     width: 350px;
+    margin-bottom: 10px;
     h5 {
       font-family: "Circamedium";
       font-size: 20px;
@@ -29,7 +33,8 @@
 
     .card-text {
       white-space: normal;
-      line-height: 1.2
+      line-height: 1.2;
+      font-size: 16px;
     }
     img {
       width: 300px;
@@ -59,7 +64,7 @@
 
 @keyframes infiniteScroll {
   from {transform: translateX(0) }
-  to {transform: translateX(calc(0px - 50% - 10px));}
+  to {transform: translateX(calc(0px - 10%));}
 }
 
 
