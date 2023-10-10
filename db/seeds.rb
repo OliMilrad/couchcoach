@@ -24,7 +24,7 @@ coach1.photos.attach(io: photo2, filename: "golub_text", content_type: "image/pn
 coach1.save!
 
 coach2 = Coach.new(name: "Юлия", filter: "сила, растяжка, функционалка, мфр")
-photo1 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691581163/yulia_photo_jbjifk.png")
+photo1 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1696941443/yulia_photo_n_a3twa4.png")
 coach2.photos.attach(io: photo1, filename: "yulia_photo", content_type: "image/png")
 photo2 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1691669058/yulia_text_r05otk.png")
 coach2.photos.attach(io: photo2, filename: "yulia_text", content_type: "image/png")
@@ -57,6 +57,22 @@ coach6.photos.attach(io: photo1, filename: "nikita_photo", content_type: "image/
 photo2 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1692212535/nikita_text_j8mcjf.png")
 coach6.photos.attach(io: photo2, filename: "nikita_text", content_type: "image/png")
 coach6.save!
+
+coach8 = Coach.new(name: "Адель", filter: "йога")
+photo1 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1696941441/adel_photo_trhp4a.png")
+coach8.photos.attach(io: photo1, filename: "adel_photo", content_type: "image/png")
+photo2 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1696941441/adel_text_p7junl.png")
+coach8.photos.attach(io: photo2, filename: "adel", content_type: "image/png")
+coach8.save!
+
+coach7 = Coach.new(name: "Трофим", filter: "функционалка, сила, танцы")
+photo1 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1696941442/trofim_photo_mrzfel.png")
+coach7.photos.attach(io: photo1, filename: "trofim_photo", content_type: "image/png")
+photo2 = URI.open("https://res.cloudinary.com/dzuk6qaao/image/upload/v1696941442/trofim_text_lyh8lm.png")
+coach7.photos.attach(io: photo2, filename: "trofim_text", content_type: "image/png")
+coach7.save!
+
+
 
 
 # coach5 = Coach.new(name: "Темирлан", filter: "сила, функционалка")
