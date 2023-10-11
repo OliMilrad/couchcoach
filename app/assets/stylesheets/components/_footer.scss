@@ -2,9 +2,10 @@
   background: #F4F4F4;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 200px;
-  padding: 0px 50px;
+  padding-top: 30px;
+  padding-right:40px;
+  padding-left:40px;
+  height: 220px;
   color: rgba(0,0,0,0.3);
 }
 
@@ -31,11 +32,14 @@ font-family: "Circa";
 font-size: 30px;
 font-style: normal;
 font-weight: 800;
-line-height: 47px;
+line-height: 1.2;
+
 }
 
 .footer_small_text {
+  padding-top: 10px;
   a {
+    border-spacing: 0 5px;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -46,7 +50,7 @@ line-height: 47px;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 32px; /* 160% */
+    line-height: 1.7; /* 160% */
   }
 text-decoration: none;
 display: flex;
@@ -61,7 +65,19 @@ font-weight: 400;
 line-height: 32px; /* 160% */
 }
 
+// .osn {
+//   position: absolute;
+// }
+
 .ip {
   overflow-x: auto;
+  position: relative;
+  bottom: 40px;
+}
 
+.footer_icons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
 }
