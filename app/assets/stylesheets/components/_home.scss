@@ -304,6 +304,23 @@ margin-bottom: 70px;
 
 }
 
+// FOOTER
+
+.page_8_mobile {
+  display: none;
+}
+
+.page_8 {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-right:40px;
+  padding-left:40px;
+  height: 220px;
+  color: rgba(0,0,0,0.3);
+}
+
 .page_3_cards::-webkit-scrollbar {
   width: 3px;
   height: 7px;

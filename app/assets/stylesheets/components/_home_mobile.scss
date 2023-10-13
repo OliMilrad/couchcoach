@@ -204,7 +204,83 @@ h1{
 }
 
 .page_8 {
-  display: none !important;
+  display: none;
 }
+
+
+//FOOTER
+
+
+.page_8_mobile {
+  background: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  height: 475px;
+  color: rgba(0,0,0,0.3);
+
+
+    .footer_text {
+    text-decoration: none;
+    display: flex;
+
+    color: black;
+    font-family: "Circa";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 10px;
+
+    }
+
+      .footer_small_text {
+        padding-top: 10px;
+        a {
+          border-spacing: 0 5px;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          color: black;
+          font-family: "Circalight";
+          text-decoration: none;
+
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.7; /* 160% */
+        }
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      color: black;
+      font-family: "Circalight";
+      text-decoration: none;
+
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px; /* 160% */
+      }
+
+      // .osn {
+      //   position: absolute;
+      // }
+
+
+
+      .footer_icons {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 55%;
+      }
+
+    }
+
 
 }
