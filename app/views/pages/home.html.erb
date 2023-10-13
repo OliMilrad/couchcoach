@@ -150,10 +150,10 @@
       <div>
         <ul class="nav">
           <li class="nav-item">
-            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">all</a>
+            <a class="btn btn-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">all</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">сила</a>
+            <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">сила</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">функционалка</a>
@@ -185,7 +185,7 @@
       </div>
       <br>
       <div class="page_3_cards">
-        <div class="card-coach"  filter_we_need="<%=@head_coach.filter%>" >
+        <div class="card-coach" data-coach-target="coach_card" filter_we_need="<%=@head_coach.filter%>" >
           <div class="figure">
             <div class="image-main"> <%= cl_image_tag @head_coach.photos[0].key, height: 270%></div>
             <div class="image-hover"> <%= cl_image_tag @head_coach.photos[1].key, height: 270%></div>
@@ -551,6 +551,44 @@
       </div>
     </div>
   </div>
+
+  <div id="6_page" class="container page_6">
+    <div class="container" style="display:flex; flex-direction:row; justify-content:space-between; margin-top:50px">
+
+        <%= image_tag "review_1.jpg", width: 350%>
+
+
+        <%= image_tag "review_2.jpg", width: 400%>
+
+        <%= image_tag "review_3.jpg", width: 350%>
+
+    </div>
+  </div>
+
+  <div id="6_page" class="container page_6_mobile">
+    <%# <div class="container" style="display:flex; flex-direction:row; justify-content:space-between; margin-top:50px"> %>
+     <div data-controller="carousel" class="swiper-container" data-carousel-options-value='{"pagination":"true"}'>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <%= image_tag "review_1.jpg", width: 350%>
+            </div>
+
+            <div class="swiper-slide">
+               <%= image_tag "review_2.jpg", width: 370%>
+             </div>
+
+            <div class="swiper-slide">
+                <%= image_tag "review_3.jpg", width: 350%>
+            </div>
+
+            <div class="swiper-slide">
+                <%= image_tag "review_4.jpg", width: 370%>
+            </div>
+
+        </div>
+     </div>
+  </div>
+
 
   <br>
 
