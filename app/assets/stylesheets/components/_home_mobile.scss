@@ -21,6 +21,8 @@
     padding-right: 16px;
     padding-left: 16px;
   }
+
+
 //1_PAGE
 .page_1 {
   display: none;
@@ -136,6 +138,13 @@
   overflow-x: hidden;
   margin-bottom: 70px;
 
+  .card-price {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+
   .swiper-wrapper {
     position: unset;
 
@@ -164,6 +173,7 @@
   display: block;
   width: 380px;
   overflow-y: hidden;
+  overflow-x: hidden;
 
   .swiper-wrapper {
     position: unset;
@@ -180,6 +190,7 @@
   display: block;
   width: 380px;
   overflow-y: hidden;
+  overflow-x: hidden;
 
   .swiper-wrapper {
     position: unset;
@@ -281,6 +292,7 @@ h1{
       }
 
     }
+
 
 
 }
