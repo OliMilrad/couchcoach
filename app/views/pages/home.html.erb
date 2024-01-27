@@ -29,7 +29,8 @@
 <div class= "main_container">
   <div id="1_page" class="container page_1">
     <div class="info_text_1 container">
-      <h1>Персональные <br>фитнес-коучи<br>
+      <h1>Персональные <br>
+        фитнес-коучи<br>
         онлайн</h1>
       <div class="row">
         <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
@@ -64,15 +65,14 @@
           :width=>730, :crop=>"pad", :background=>"white"
           ],
         :fallback_content => "Your browser does not support HTML5 video tags." ) %>
-
     </div>
   </div>
   <div id="1_page" class="container page_1_mobile">
     <div class="info_text_1 container">
-     <div class="page_1_photo">
-    <%= image_tag "main_photo_mobile.jpg", width: 290 %>
-    </div>
-    <br>
+      <div class="page_1_photo">
+        <%= image_tag "main_photo_mobile.jpg", width: 290 %>
+      </div>
+      <br>
       <div class="row">
         <div class="col-1" style="line-height: 25px"> <%= image_tag "arrow_1.svg"%> </div>
         <div class="col-11 page_text_1" style="line-height: 25px"> в удобное для тебя время </div>
@@ -97,7 +97,6 @@
       </div>
       <a href="https://t.me/couch_coach_bot?start" class="btn btn-green btn-firstpage"  >Го на спорт!</a>
     </div>
-
   </div>
   <br>
   <div id="2_page" class="container page_2">
@@ -113,33 +112,30 @@
         </div>
         <p> Подбираем тренера</p>
       </div>
-          <div class="arrow">
-          <%= image_tag "arrow.png", width: 320%>
-          </div>
-
-        <div class="arrow_small">
-          <%=image_tag "arrow_small.svg"%>
-        </div>
-
+      <div class="arrow">
+        <%= image_tag "arrow.png", width: 320%>
+      </div>
+      <div class="arrow_small">
+        <%=image_tag "arrow_small.svg"%>
+      </div>
       <div class="graph 2_el">
         <div class="circle-green">
           <h2>02</h2>
         </div>
         <p> Назначаем удобное время</p>
       </div>
-          <div class="arrow">
-          <%= image_tag "arrow.png", width: 320%>
-          </div>
-
-          <div class="arrow_small">
-            <%=image_tag "arrow_small.svg", width: 350%>
-          </div>
-
+      <div class="arrow">
+        <%= image_tag "arrow.png", width: 320%>
+      </div>
+      <div class="arrow_small">
+        <%=image_tag "arrow_small.svg", width: 350%>
+      </div>
       <div class="graph el_3">
         <div class="circle-green">
           <h2>03</h2>
         </div>
-        <p> <nobr>Перед занятием высылаем</nobr> <br>ссылку на видео-треню</p>
+        <p> <nobr>Перед занятием высылаем</nobr> <br>
+          ссылку на видео-треню</p>
       </div>
     </div>
   </div>
@@ -179,8 +175,6 @@
           <li class="nav-item">
             <a class="btn btn-outline-dark btn-filter" data-action="click->coach#changecolor" data-coach-target="coach_filter">реабилитация</a>
           </li>
-
-
         </ul>
       </div>
       <br>
@@ -230,11 +224,12 @@
               <p class="card-text"> Первая тренировка</p>
               <p class="card-text free-card-text">Занятие - консультация <br>
                 с нашим крутым хэд-коучем</p>
-                <a
+              <a
                   class="btn btn-light w-100 btn-coach btn-free"
                   data-action="click->price#confirm_purchase"
-                  data-number-of-trainings="1"
+                data-number-of-trainings="1"
                 >Хвать!</a>
+              <%# <%= pay_url "Pay with Robo", 100, 1234 %>
             </div>
           </div>
         </div>
@@ -260,7 +255,7 @@
               class="btn btn-light w-100 btn-coach"
               data-action="click->price#confirm_purchase"
               data-number-of-trainings="4"
-            >Купить</a>
+              >Купить</a>
           </div>
         </div>
         <div class="card-price" >
@@ -285,7 +280,7 @@
               class="btn btn-light w-100 btn-coach"
               data-action="click->price#confirm_purchase"
               data-number-of-trainings="8"
-            >Купить</a>
+              >Купить</a>
           </div>
         </div>
         <div class="card-price">
@@ -310,7 +305,7 @@
               class="btn btn-light w-100 btn-coach"
               data-action="click->price#confirm_purchase"
               data-number-of-trainings="24"
-            >Купить</a>
+              >Купить</a>
           </div>
         </div>
       </div>
@@ -320,126 +315,117 @@
     <div data-controller="price">
       <div data-controller="carousel" class="swiper-container" data-carousel-options-value='{"pagination":"true"}'>
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card-price">
-                <div class="card-body free-card">
-                  <div class="free-details">
-                    <p class="card-text">Первая тренировка</p>
-                    <p class="card-text">Время (мин)</p>
-                    <div class="train-length-wrapper">
-                      <div class="train-length-item-active">
-                        <h5>30</h5>
-                      </div>
+          <div class="swiper-slide">
+            <div class="card-price">
+              <div class="card-body free-card">
+                <div class="free-details">
+                  <p class="card-text">Первая тренировка</p>
+                  <p class="card-text">Время (мин)</p>
+                  <div class="train-length-wrapper">
+                    <div class="train-length-item-active">
+                      <h5>30</h5>
                     </div>
-                    <h5 class="card-title">0 ₽</h5>
-                    <p class="card-text"> Первая тренировка</p>
-                    <p class="card-text">Занятие - консультация <br>
-                      с нашим крутым хэд-коучем</p>
-                    <div class="btn-coach-wrapper">
-                      <a
+                  </div>
+                  <h5 class="card-title">0 ₽</h5>
+                  <p class="card-text"> Первая тренировка</p>
+                  <p class="card-text">Занятие - консультация <br>
+                    с нашим крутым хэд-коучем</p>
+                  <div class="btn-coach-wrapper">
+                    <a
                         class="btn btn-light w-100 btn-coach btn-free"
                         data-action="click->price#confirm_purchase"
-                        data-number-of-trainings="1"
+                      data-number-of-trainings="1"
                       >Хвать!</a>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-           <div class="swiper-slide">
-              <div class="card-price">
-                <div class="card-body">
-                  <p class="card-text">4 тренировки</p>
-                  <p class="card-text">Время (мин)</p>
-                  <div class="train-length-wrapper">
-                    <div class="train-length-item" data-price-target="four_card_half_time_to_change">
-                      <h5 data-action="click->price#changetime_four">30</h5>
-                    </div>
-                    <div class="train-length-item-active" data-price-target="four_card_full_time_to_change">
-                      <h5 data-action="click->price#changetime_four">60</h5>
-                    </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card-price">
+              <div class="card-body">
+                <p class="card-text">4 тренировки</p>
+                <p class="card-text">Время (мин)</p>
+                <div class="train-length-wrapper">
+                  <div class="train-length-item" data-price-target="four_card_half_time_to_change">
+                    <h5 data-action="click->price#changetime_four">30</h5>
                   </div>
-                  <h5 class="card-title" data-price-target="four_card_price_to_change">1829 ₽</h5>
-                  <p class="card-text"> за 1 тренировку</p>
-                  <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_four_no_m">7700</span><span id = "span_four_yes_m" style="color:black;"> / 7315 ₽</span></p>
-                  <div class="discount-wrapper">
-                    <div class="discount-badge"> Скидка 5%</div>
+                  <div class="train-length-item-active" data-price-target="four_card_full_time_to_change">
+                    <h5 data-action="click->price#changetime_four">60</h5>
                   </div>
-                  <a
+                </div>
+                <h5 class="card-title" data-price-target="four_card_price_to_change">1829 ₽</h5>
+                <p class="card-text"> за 1 тренировку</p>
+                <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_four_no_m">7700</span><span id = "span_four_yes_m" style="color:black;"> / 7315 ₽</span></p>
+                <div class="discount-wrapper">
+                  <div class="discount-badge"> Скидка 5%</div>
+                </div>
+                <a
                     class="btn btn-light w-100 btn-coach"
                     data-action="click->price#confirm_purchase"
-                    data-number-of-trainings="4"
+                  data-number-of-trainings="4"
                   >Купить</a>
-                </div>
               </div>
-           </div>
-           <div class="swiper-slide">
-              <div class="card-price" >
-                <div class="card-body">
-                  <p class="card-text">8 тренировок</p>
-                  <p class="card-text">Время (мин)</p>
-                  <div class="train-length-wrapper">
-                    <div class="train-length-item" data-price-target="eight_card_half_time_to_change">
-                      <h5 data-action="click->price#changetime_eight">30</h5>
-                    </div>
-                    <div class="train-length-item-active" data-price-target="eight_card_full_time_to_change">
-                      <h5 data-action="click->price#changetime_eight">60</h5>
-                    </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card-price" >
+              <div class="card-body">
+                <p class="card-text">8 тренировок</p>
+                <p class="card-text">Время (мин)</p>
+                <div class="train-length-wrapper">
+                  <div class="train-length-item" data-price-target="eight_card_half_time_to_change">
+                    <h5 data-action="click->price#changetime_eight">30</h5>
                   </div>
-                  <h5 class="card-title" data-price-target="eight_card_price_to_change">1308 ₽</h5>
-                  <p class="card-text"> за 1 тренировку</p>
-                  <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_eight_no_m">11500</span><span id = "span_eight_yes_m" style="color:black;"> / 10465 ₽</span></p>
-                  <div class="discount-wrapper">
-                    <div class="discount-badge"> Скидка 9%</div>
+                  <div class="train-length-item-active" data-price-target="eight_card_full_time_to_change">
+                    <h5 data-action="click->price#changetime_eight">60</h5>
                   </div>
-                  <a
+                </div>
+                <h5 class="card-title" data-price-target="eight_card_price_to_change">1308 ₽</h5>
+                <p class="card-text"> за 1 тренировку</p>
+                <p class="card-text full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_eight_no_m">11500</span><span id = "span_eight_yes_m" style="color:black;"> / 10465 ₽</span></p>
+                <div class="discount-wrapper">
+                  <div class="discount-badge"> Скидка 9%</div>
+                </div>
+                <a
                     class="btn btn-light w-100 btn-coach"
                     data-action="click->price#confirm_purchase"
-                    data-number-of-trainings="8"
+                  data-number-of-trainings="8"
                   >Купить</a>
-                </div>
               </div>
-           </div>
-           <div class="swiper-slide">
-              <div class="card-price">
-                <div class="card-body">
-                  <p class="card-text">24 тренировки</p>
-                  <p class="card-text">Время (мин)</p>
-                  <div class="train-length-wrapper">
-                    <div class="train-length-item" data-price-target="twfour_card_half_time_to_change">
-                      <h5 data-action="click->price#changetime_twfour">30</h5>
-                    </div>
-                    <div class="train-length-item-active" data-price-target="twfour_card_full_time_to_change">
-                      <h5 data-action="click->price#changetime_twfour">60</h5>
-                    </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card-price">
+              <div class="card-body">
+                <p class="card-text">24 тренировки</p>
+                <p class="card-text">Время (мин)</p>
+                <div class="train-length-wrapper">
+                  <div class="train-length-item" data-price-target="twfour_card_half_time_to_change">
+                    <h5 data-action="click->price#changetime_twfour">30</h5>
                   </div>
-                  <h5 class="card-title" data-price-target="twfour_card_price_to_change">981 ₽</h5>
-                  <p class="card-text"> за 1 тренировку</p>
-                  <p class="full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_twfour_no_m">27700</span><span id = "span_twfour_yes_m" style="color:black; ">  / 23545 ₽</span></p>
-                  <div class="discount-wrapper">
-                    <div class="discount-badge"> Скидка 15%</div>
+                  <div class="train-length-item-active" data-price-target="twfour_card_full_time_to_change">
+                    <h5 data-action="click->price#changetime_twfour">60</h5>
                   </div>
-                  <a
+                </div>
+                <h5 class="card-title" data-price-target="twfour_card_price_to_change">981 ₽</h5>
+                <p class="card-text"> за 1 тренировку</p>
+                <p class="full_price"> <span style="text-decoration:line-through; text-decoration-thickness:2px" id = "span_twfour_no_m">27700</span><span id = "span_twfour_yes_m" style="color:black; ">  / 23545 ₽</span></p>
+                <div class="discount-wrapper">
+                  <div class="discount-badge"> Скидка 15%</div>
+                </div>
+                <a
                     class="btn btn-light w-100 btn-coach"
                     data-action="click->price#confirm_purchase"
-                    data-number-of-trainings="24"
+                  data-number-of-trainings="24"
                   >Купить</a>
-                </div>
               </div>
-           </div>
-
+            </div>
+          </div>
         </div>
-
-       <div class="swiper-pagination"></div>
-
-
+        <div class="swiper-pagination"></div>
       </div>
-
-
-
-
-
-  </div>
+    </div>
   </div>
   <br>
   <div id="5_page" class="container page_5">
@@ -487,291 +473,254 @@
                     <p class="card-text">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
                     </div>
                   </div>
-    </div>
-  </div>
-
-  <div id="5_page" class="container page_5_mobile">
-    <h1 class="text-center pb-4">Зачем это мне?</h1>
-    <div data-controller="carousel" class="swiper-container">
-      <div class="swiper-wrapper">
-         <div class="swiper-slide">
-         <div class="card davay_chestno" >
-          <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
-          <div class="card-body">
-          <h5 class="card-title">Давай честно</h5>
-          <p class="card-text" >Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
-          </div>
-        </div>
-        </div>
-        <div class="swiper-slide">
-        <div class="card davay_chestno">
-          <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
-          <div class="card-body">
-            <h5 class="card-title">Безопасность и польза</h5>
-            <p class="card-text">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
-            </div>
-        </div>
-        </div>
-          <div class="swiper-slide">
-          <div class="card davay_chestno">
-            <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
-            <div class="card-body">
-              <h5 class="card-title">Всегда под рукой</h5>
-              <p class="card-text">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
-              </div>
-          </div>
-          </div>
-            <div class="swiper-slide">
-            <div class="card davay_chestno">
-              <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
-              <div class="card-body">
-                <h5 class="card-title">Нужен только он</h5>
-                <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
                 </div>
-            </div>
-            </div>
-              <div class="swiper-slide">
-              <div class="card davay_chestno">
-                <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
-                <div class="card-body">
-                  <h5 class="card-title">Можно дома. И не только</h5>
-                  <p class="card-text">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
-                  </div>
               </div>
-              </div>
-              <div class="swiper-slide">
-              <div class="card davay_chestno">
-                              <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
+              <div id="5_page" class="container page_5_mobile">
+                <h1 class="text-center pb-4">Зачем это мне?</h1>
+                <div data-controller="carousel" class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="card davay_chestno" >
+                        <%= image_tag "couchcoach_1_davai_chestno.jpg"%>
+                        <div class="card-body">
+                          <h5 class="card-title">Давай честно</h5>
+                          <p class="card-text" >Заниматься самостоятельно – сложно. Особенно по началу. Наш мозг придумает 1000 причин, почему позаниматься можно и завтра/никогда. Тренер поможет тебе «не сбиваться» с пути.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card davay_chestno">
+                          <%= image_tag "couchcoach_2_davai_chestno.jpg"%>
+                          <div class="card-body">
+                            <h5 class="card-title">Безопасность и польза</h5>
+                            <p class="card-text">Все наши коучи – крутые профессионалы. Да, с ними весело, но еще они по-взрослому следят за тем, как ты выполняешь упражнения. Чтобы без травм и усилий впустую.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card davay_chestno">
+                            <%= image_tag "couchcoach_3_davai_chestno.jpg"%>
+                            <div class="card-body">
+                              <h5 class="card-title">Всегда под рукой</h5>
+                              <p class="card-text">Бывает, что рррраааз – и захотелось потренить. Если тебе срочно надо в планку – мы найдем классного коуча здесь и сейчас.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="card davay_chestno">
+                              <%= image_tag "couchcoach_4_davai_chestno.jpg"%>
                               <div class="card-body">
-                                <h5 class="card-title">Не зашел коуч? Бывает!</h5>
-                                <p class="card-text">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
+                                <h5 class="card-title">Нужен только он</h5>
+                                <p class="card-text">Ин-тер-нет. И любой девайс, который имеет туда выход. Тренироваться можно даже без фитнес-коврика, прямо на своем родном половичке.
                                 </div>
-              </div>
-              </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="6_page" class="container page_6">
-  <h1 class="text-center pb-4">Отзывы</h1>
-    <div class="container" style="display:flex; flex-direction:row; justify-content:space-between; margin-top:50px; padding: 0px">
-
-        <%= image_tag "review_3.png", style: 'height:auto;width:25%'%>
-        <%= image_tag "review_1.png", style: 'height:auto;width:25%'%>
-
-        <%= image_tag "review_4.png", style: 'height:auto;width:25%'%>
-         <%= image_tag "review_2.png", style: 'height:auto;width:25%'%>
-
-
-    </div>
-  </div>
-
-  <div id="6_page" class="container page_6_mobile">
-  <h1 class="text-center pb-4">Отзывы</h1>
-    <%# <div class="container" style="display:flex; flex-direction:row; justify-content:space-between; margin-top:50px"> %>
-     <div data-controller="carousel" class="swiper-container" data-carousel-options-value='{"pagination":"true"}'>
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <%= image_tag "review_1.png", width: 350%>
-            </div>
-
-            <div class="swiper-slide">
-               <%= image_tag "review_2.png", width: 350%>
-             </div>
-
-            <div class="swiper-slide">
-                <%= image_tag "review_3.png", width: 350%>
-            </div>
-
-            <div class="swiper-slide">
-                <%= image_tag "review_4.png", width: 350%>
-            </div>
-
-        </div>
-     </div>
-  </div>
-
-
-  <br>
-
-        <div id="7_page" class="container page_7" >
-                                  <div class="text-center page-content">
-                                    <div class="page-text">
-                                      <h1 >Для тренеров и коучей</h1>
-                                      <p >Если ты талантливый коуч, любишь диваны и людей – <br>
-                                        оставь свои контакты, мы тебе напишем. </p>
-                                      <p>У нас классные условия и крутые офисы по всему миру! <br>Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
-                                      <a href="https://t.me/couch_coach_bot?start=123" class="btn btn-green">
-                                        <h6>Хочу к вам</h6>
-                                      </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="card davay_chestno">
+                                <%= image_tag "couchcoach_5_davai_chestno.jpg"%>
+                                <div class="card-body">
+                                  <h5 class="card-title">Можно дома. И не только</h5>
+                                  <p class="card-text">Ты можешь заниматься в отеле, на пляже и в зале! Все, что нужно – взять с собой телефон и подключиться на звонок.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="card davay_chestno">
+                                  <%= image_tag "couchcoach_6_davai_chestno.jpg"%>
+                                  <div class="card-body">
+                                    <h5 class="card-title">Не зашел коуч? Бывает!</h5>
+                                    <p class="card-text">Наши заботливые менеджеры познакомят тебя с другим коучем. Мы найдем тебе того самого.
                                     </div>
                                   </div>
-        </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="6_page" class="container page_6">
+                            <h1 class="text-center pb-4">Отзывы</h1>
+                            <div class="container" style="display:flex; flex-direction:row; justify-content:space-between; margin-top:50px; padding: 0px">
+                              <%= image_tag "review_3.png", style: 'height:auto;width:25%'%>
+                              <%= image_tag "review_1.png", style: 'height:auto;width:25%'%>
+                              <%= image_tag "review_4.png", style: 'height:auto;width:25%'%>
+                              <%= image_tag "review_2.png", style: 'height:auto;width:25%'%>
+                            </div>
+                          </div>
+                          <div id="6_page" class="container page_6_mobile">
+                            <h1 class="text-center pb-4">Отзывы</h1>
+                            <%# <div class="container" style="display:flex; flex-direction:row; justify-content:space-between; margin-top:50px"> %>
+                            <div data-controller="carousel" class="swiper-container" data-carousel-options-value='{"pagination":"true"}'>
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <%= image_tag "review_1.png", width: 350%>
+                                </div>
+                                <div class="swiper-slide">
+                                  <%= image_tag "review_2.png", width: 350%>
+                                </div>
+                                <div class="swiper-slide">
+                                  <%= image_tag "review_3.png", width: 350%>
+                                </div>
+                                <div class="swiper-slide">
+                                  <%= image_tag "review_4.png", width: 350%>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div id="7_page" class="container page_7" >
+                            <div class="text-center page-content">
+                              <div class="page-text">
+                                <h1 >Для тренеров и коучей</h1>
+                                <p >Если ты талантливый коуч, любишь диваны и людей – <br>
+                                  оставь свои контакты, мы тебе напишем. </p>
+                                <p>У нас классные условия и крутые офисы по всему миру! <br>
+                                  Ведь, когда работаешь удаленно, офис может быть везде, где работает связь.</p>
+                                <a href="https://t.me/couch_coach_bot?start=123" class="btn btn-green">
+                                  <h6>Хочу к вам</h6>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="page_8">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-2 osn">
+                              <%= image_tag "logo_footer.svg", width: 130 %>
+                            </div>
+                            <div class="col-4 footer_text">
+                              С дивана – на треню. <br>
+                               С трени – на диван.
+                            </div>
+                            <div class="col-3 footer_text">
+                              Документы
+                              <div class="footer_small_text">
+                                <a href="/oferta">Договор оферты</a>
+                                <a href="/personal">Политика конфиденциальности</a>
+                                <a href="/agreement">Пользовательское соглашение</a>
+                              </div>
+                            </div>
+                            <div class="col-2 footer_text">
+                              Контакты
+                              <div class="footer_small_text">
+                                hello@trener-na-divane.com
+                              </div>
+                              <div class="footer_icons">
+                                <a href="https://www.facebook.com/profile.php?id=100094182139252"><%= image_tag "icons_FB.svg",  width: 40 %></a>
+                                <a href="https://instagram.com/couchcoach.fit?igshid=MzRlODBiNWFlZA=="><%= image_tag "icons_Inst.svg", width: 40%></a>
+                                <a href="https://t.me/couchcoach"><%= image_tag "icons_tg.svg", width: 40%></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class ="row">
+                            <div class="column">
+                              <div class="footer_small_text ip">
+                                ИП МАРКОВА МАРИЯ АЛЕКСАНДРОВНА ИНН 772589253290
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="page_8_mobile">
+                        <div class="footer" style="display:flex; flex-direction: row; justify-content: space-between; margin-bottom: 10px">
+                          <%= image_tag "logo_footer.svg", width: 80 %>
+                          <div class="footer_text">
+                            С дивана – на треню. <br>
+                             С трени – на диван.
+                          </div>
+                        </div>
+                        <div class="footer_text">
+                          Документы
+                          <div class="footer_small_text">
+                            <a href="/oferta">Договор оферты</a>
+                            <a href="/personal">Политика конфиденциальности</a>
+                            <a href="/agreement">Пользовательское соглашение</a>
+                          </div>
+                        </div>
+                        <div class="footer_text">
+                          Контакты
+                          <div class="footer_small_text">
+                            hello@trener-na-divane.com
+                          </div>
+                          <div class="footer_icons">
+                            <a href="https://www.facebook.com/profile.php?id=100094182139252"><%= image_tag "icons_FB.svg",  width: 40 %></a>
+                            <a href="https://instagram.com/couchcoach.fit?igshid=MzRlODBiNWFlZA=="><%= image_tag "icons_Inst.svg", width: 40%></a>
+                            <a href="https://t.me/couchcoach"><%= image_tag "icons_tg.svg", width: 40%></a>
+                          </div>
+                        </div>
+                        <div class="footer_small_text">
+                          ИП МАРКОВА МАРИЯ АЛЕКСАНДРОВНА<br>
+                          ИНН 772589253290
+                        </div>
+                      </div>
+                    </div>
+                    <script>
+                      const header1 = document.getElementById('item-1page');
 
+                      header1.addEventListener('click', function() {
+                          const element = document.getElementById("2_page");
+                            const y =
+                              element.getBoundingClientRect().top +
+                              window.pageYOffset -
+                              header.offsetHeight -
+                              30;
+                            if (element) {
+                              window.scrollTo({ top: +y, behavior: 'smooth' });
+                            }
+                          })
 
+                      const header2 = document.getElementById('item-2page');
 
+                      header2.addEventListener('click', function() {
+                          const element = document.getElementById("3_page");
+                            const y =
+                              element.getBoundingClientRect().top +
+                              window.pageYOffset -
+                              header.offsetHeight -
+                              30;
+                            if (element) {
+                              window.scrollTo({ top: +y, behavior: 'smooth' });
+                            }
+                          })
+                      const header3 = document.getElementById('item-3page');
 
+                      header3.addEventListener('click', function() {
+                          const element = document.getElementById("4_page");
+                            const y =
+                              element.getBoundingClientRect().top +
+                              window.pageYOffset -
+                              header.offsetHeight -
+                              30;
+                            if (element) {
+                              window.scrollTo({ top: +y, behavior: 'smooth' });
+                            }
+                          })
 
+                      const header4 = document.getElementById('item-4page');
 
-  </div>
+                      header4.addEventListener('click', function() {
+                          const element = document.getElementById("5_page");
+                            const y =
+                              element.getBoundingClientRect().top +
+                              window.pageYOffset -
+                              header.offsetHeight -
+                              30;
+                            if (element) {
+                              window.scrollTo({ top: +y, behavior: 'smooth' });
+                            }
+                          })
 
-</div>
+                      const header5 = document.getElementById('item-5page');
 
-<div class="page_8">
-   <div class="container">
-      <div class="row">
-          <div class="col-2 osn">
-           <%= image_tag "logo_footer.svg", width: 130 %>
-
-
-          </div>
-          <div class="col-4 footer_text">
-            С дивана – на треню. <br> С трени – на диван.
-          </div>
-
-          <div class="col-3 footer_text">
-            Документы
-
-              <div class="footer_small_text">
-                <a href="/oferta">Договор оферты</a>
-                <a href="/personal">Политика конфиденциальности</a>
-                <a href="/agreement">Пользовательское соглашение</a>
-              </div>
-          </div>
-
-          <div class="col-2 footer_text">
-              Контакты
-                <div class="footer_small_text">
-                  hello@trener-na-divane.com
-                </div>
-                <div class="footer_icons">
-                  <a href="https://www.facebook.com/profile.php?id=100094182139252"><%= image_tag "icons_FB.svg",  width: 40 %></a>
-                  <a href="https://instagram.com/couchcoach.fit?igshid=MzRlODBiNWFlZA=="><%= image_tag "icons_Inst.svg", width: 40%></a>
-                  <a href="https://t.me/couchcoach"><%= image_tag "icons_tg.svg", width: 40%></a>
-                </div>
-          </div>
-      </div>
-      <div class ="row">
-        <div class="column">
-             <div class="footer_small_text ip">
-                  ИП МАРКОВА МАРИЯ АЛЕКСАНДРОВНА ИНН 772589253290
-              </div>
-        </div>
-      </div>
-    </div>
-
-
-</div>
-
-<div class="page_8_mobile">
-
-      <div class="footer" style="display:flex; flex-direction: row; justify-content: space-between; margin-bottom: 10px">
-
-           <%= image_tag "logo_footer.svg", width: 80 %>
-
-
-          <div class="footer_text">
-            С дивана – на треню. <br> С трени – на диван.
-          </div>
-      </div>
-
-      <div class="footer_text">
-        Документы
-
-              <div class="footer_small_text">
-                <a href="/oferta">Договор оферты</a>
-                <a href="/personal">Политика конфиденциальности</a>
-                <a href="/agreement">Пользовательское соглашение</a>
-              </div>
-      </div>
-
-      <div class="footer_text">
-              Контакты
-                <div class="footer_small_text">
-                  hello@trener-na-divane.com
-                </div>
-                <div class="footer_icons">
-                  <a href="https://www.facebook.com/profile.php?id=100094182139252"><%= image_tag "icons_FB.svg",  width: 40 %></a>
-                  <a href="https://instagram.com/couchcoach.fit?igshid=MzRlODBiNWFlZA=="><%= image_tag "icons_Inst.svg", width: 40%></a>
-                  <a href="https://t.me/couchcoach"><%= image_tag "icons_tg.svg", width: 40%></a>
-                </div>
-
-      </div>
-
-      <div class="footer_small_text">
-                  ИП МАРКОВА МАРИЯ АЛЕКСАНДРОВНА<br>ИНН 772589253290
-       </div>
-
-</div>
-
-</div>
-<script>
-                          const header1 = document.getElementById('item-1page');
-
-                          header1.addEventListener('click', function() {
-                              const element = document.getElementById("2_page");
-                                const y =
-                                  element.getBoundingClientRect().top +
-                                  window.pageYOffset -
-                                  header.offsetHeight -
-                                  30;
-                                if (element) {
-                                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                                }
-                              })
-
-                          const header2 = document.getElementById('item-2page');
-
-                          header2.addEventListener('click', function() {
-                              const element = document.getElementById("3_page");
-                                const y =
-                                  element.getBoundingClientRect().top +
-                                  window.pageYOffset -
-                                  header.offsetHeight -
-                                  30;
-                                if (element) {
-                                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                                }
-                              })
-                          const header3 = document.getElementById('item-3page');
-
-                          header3.addEventListener('click', function() {
-                              const element = document.getElementById("4_page");
-                                const y =
-                                  element.getBoundingClientRect().top +
-                                  window.pageYOffset -
-                                  header.offsetHeight -
-                                  30;
-                                if (element) {
-                                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                                }
-                              })
-
-                          const header4 = document.getElementById('item-4page');
-
-                          header4.addEventListener('click', function() {
-                              const element = document.getElementById("5_page");
-                                const y =
-                                  element.getBoundingClientRect().top +
-                                  window.pageYOffset -
-                                  header.offsetHeight -
-                                  30;
-                                if (element) {
-                                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                                }
-                              })
-
-                          const header5 = document.getElementById('item-5page');
-
-                          header5.addEventListener('click', function() {
-                              const element = document.getElementById("7_page");
-                                const y =
-                                  element.getBoundingClientRect().top +
-                                  window.pageYOffset -
-                                  header.offsetHeight -
-                                  30;
-                                if (element) {
-                                  window.scrollTo({ top: +y, behavior: 'smooth' });
-                                }
-                              })
-                        </script>
+                      header5.addEventListener('click', function() {
+                          const element = document.getElementById("7_page");
+                            const y =
+                              element.getBoundingClientRect().top +
+                              window.pageYOffset -
+                              header.offsetHeight -
+                              30;
+                            if (element) {
+                              window.scrollTo({ top: +y, behavior: 'smooth' });
+                            }
+                          })
+                    </script>

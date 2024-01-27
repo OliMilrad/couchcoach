@@ -3,24 +3,22 @@
   <head>
     <title>Couchcoach</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="8qCedJYRQGpL7K_C7T5t29OfhHsnkLHXh1t7aJhcnqM" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5M0Q598QC"></script>
-         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5M0Q598QC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        gtag('config', 'G-X5M0Q598QC');
-      </script>
+      gtag('config', 'G-X5M0Q598QC');
+    </script>
   </head>
-
   <body>
-<%= render "shared/flashes" %>
-
+    <%= render "shared/flashes" %>
     <%= yield %>
   </body>
 </html>
