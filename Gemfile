@@ -49,7 +49,6 @@ gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 # gem "mini_magick"
 gem "cloudinary"
-gem "rubykassa"
 
 gem "devise"
 gem "autoprefixer-rails"
