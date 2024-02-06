@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 const chatURL = "https://t.me/couch_coach_bot?start=";
+const testZero = "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=Couch_coach&InvId=0&Culture=ru&Encoding=utf-8&OutSum=10&shp_interface=link&SignatureValue=681165c2e0d22c6606fc66678c2159c4"
 const payment4T_5225 ="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=Couch_coach&InvId=0&Culture=ru&Encoding=utf-8&Description=4%20%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8%20%D0%BF%D0%BE%2030%20%D0%BC%D0%B8%D0%BD%D1%83%D1%82&OutSum=5225&shp_interface=link&SignatureValue=3958da9ba0d2522bc539dd5bf5f3cb00"
 const payment4T_7315 = "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=Couch_coach&InvId=0&Culture=ru&Encoding=utf-8&OutSum=7315&shp_interface=link&SignatureValue=1d0291a1f74b25e0240251a8f9f1cbac"
 const payment8T_7007 = "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=Couch_coach&InvId=0&Culture=ru&Encoding=utf-8&OutSum=7007&shp_interface=link&SignatureValue=86d4d22e9aeab1147429d73d055b68ce"
@@ -46,6 +47,7 @@ export default class extends Controller {
         }
         break;
       default:
+        // location.assign(testZero);
         location.assign(chatURL + "0");
         break;
     }
